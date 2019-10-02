@@ -1,4 +1,4 @@
-title: Eclipse.ini参数设置
+title: Win8(X64)下MySQL5.6版本安装及配置
 author: JsonYe
 tags:
   - mysql
