@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML介绍 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML介绍</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML介绍</h1><div class="post-meta">May 18, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是UML"><span class="toc-number">1.</span> <span class="toc-text">什么是UML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML建模可以达到以下目的"><span class="toc-number">2.</span> <span class="toc-text">UML建模可以达到以下目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML的历史"><span class="toc-number">3.</span> <span class="toc-text">UML的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一阶段：OO方法学家的联合行动"><span class="toc-number">3.1.</span> <span class="toc-text">第一阶段：OO方法学家的联合行动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二阶段：公司的联合行动"><span class="toc-number">3.2.</span> <span class="toc-text">第二阶段：公司的联合行动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三阶段：OMG主持下的修订"><span class="toc-number">3.3.</span> <span class="toc-text">第三阶段：OMG主持下的修订</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四阶段：UML的重大修订——UML2"><span class="toc-number">3.4.</span> <span class="toc-text">第四阶段：UML的重大修订——UML2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五阶段：提交到ISO申请成为国际标准"><span class="toc-number">3.5.</span> <span class="toc-text">第五阶段：提交到ISO申请成为国际标准</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML的主要特点"><span class="toc-number">4.</span> <span class="toc-text">UML的主要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML的应用领域"><span class="toc-number">5.</span> <span class="toc-text">UML的应用领域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML中的视图"><span class="toc-number">6.</span> <span class="toc-text">UML中的视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML定义了5类，10种模型图"><span class="toc-number">7.</span> <span class="toc-text">UML定义了5类，10种模型图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML建模工具"><span class="toc-number">8.</span> <span class="toc-text">UML建模工具</span></a></li></ol></div></div><div class="post-content"><h3 id="什么是UML"><a href="#什么是UML" class="headerlink" title="什么是UML"></a>什么是UML</h3><p>UML是Unified Modeling Language（统一建模语言）的简称。UML是对软件密集型系统中的制品进行可视化、详述、构造和文档化的语言。制品{Artifact}是指软件开发过程中产生的各种各样的产物，如模型、源代码、测试用例等。</p>
+<h3 id="UML建模可以达到以下目的"><a href="#UML建模可以达到以下目的" class="headerlink" title="UML建模可以达到以下目的"></a>UML建模可以达到以下目的</h3><ul>
+<li>使用模型可以更好地理解问题</li>
+<li>使用模型可以加强人员之间的沟通</li>
+<li>使用模型可以更早地发现错误或疏漏的地方</li>
+<li>使用模型可以获得设计结果</li>
+<li>模型为最后的代码提供依据</li>
+</ul>
+<h3 id="UML的历史"><a href="#UML的历史" class="headerlink" title="UML的历史"></a>UML的历史</h3><h4 id="第一阶段：OO方法学家的联合行动"><a href="#第一阶段：OO方法学家的联合行动" class="headerlink" title="第一阶段：OO方法学家的联合行动"></a>第一阶段：OO方法学家的联合行动</h4><ul>
+<li>1995.10：G.Booch 与J.Rumbaugh联合（推出Unified Method 0.8）</li>
+<li>1996.6：I.Jacobson加入（推出UML0.9[Unified Modeling Language]）–各家主要的面向对象方法家将其各自的方法统一为UML，但不称统一建模方法，而称统一建模语言，最根本的原因在于UML只是统一的概念与表示法，没有统一过程。</li>
+</ul>
+<h4 id="第二阶段：公司的联合行动"><a href="#第二阶段：公司的联合行动" class="headerlink" title="第二阶段：公司的联合行动"></a>第二阶段：公司的联合行动</h4><ul>
+<li>1996：成立了UML伙伴组织，12家公司加入。</li>
+<li>1997.1：推出UML1.0，另外5家公司加盟。</li>
+<li>1997.9：形成UML1.1，提交OMG作为建模语言规范提案。</li>
+<li>1997.11：UML1.1被OMG正式采纳。</li>
+</ul>
+<h4 id="第三阶段：OMG主持下的修订"><a href="#第三阶段：OMG主持下的修订" class="headerlink" title="第三阶段：OMG主持下的修订"></a>第三阶段：OMG主持下的修订</h4><ul>
+<li>1997~2002：OMG成立UML修订任务组主持UML的修订，先后产生UML1.2、UML1.3、UML1.4、UML1.5等版本。</li>
+</ul>
+<h4 id="第四阶段：UML的重大修订——UML2"><a href="#第四阶段：UML的重大修订——UML2" class="headerlink" title="第四阶段：UML的重大修订——UML2"></a>第四阶段：UML的重大修订——UML2</h4><ul>
+<li>1999：开始酝酿，旨在产生比UML1有显著改进的新版本。</li>
+<li>2000~2001：由OMG陆续发不了4个提案需求（RFP）[征集提案，择优采纳]。</li>
+<li>2002年之后先后形成4个UML2.0规范，在OMG的组织下进行修订，产生了UML2.1~2.4一系列版本。</li>
+</ul>
+<h4 id="第五阶段：提交到ISO申请成为国际标准"><a href="#第五阶段：提交到ISO申请成为国际标准" class="headerlink" title="第五阶段：提交到ISO申请成为国际标准"></a>第五阶段：提交到ISO申请成为国际标准</h4><ul>
+<li>2005年以后UML2的4个规范陆续进入ISO的标准化日程，目前UML基础结构、UML上层结构、OCL已被ISO正式采纳，成为建模语言国际标准。</li>
+</ul>
+<h3 id="UML的主要特点"><a href="#UML的主要特点" class="headerlink" title="UML的主要特点"></a>UML的主要特点</h3><ul>
+<li>统一的标准。</li>
+<li>面向对象。UML是支持面向对象软件开发的建模语言。</li>
+<li>可视化、表现能力强。</li>
+<li>独立于过程，UML不依赖于特定的软件开发过程。</li>
+<li>概念明确，建模表示法简洁，图形结构清晰，容易掌握和使用。</li>
+</ul>
+<h3 id="UML的应用领域"><a href="#UML的应用领域" class="headerlink" title="UML的应用领域"></a>UML的应用领域</h3><p>UML具有很广泛的应用领域，其中最常用的是为软件系统建模，主要领域有：企业信息系统、银行金融系统、电信、交通、国防、航空、零售领域、科学计算、分布式的基于Web的服务。UML还可以用来描述其他非软件系统，比如一个机构的组成和机构的工作流程等等。</p>
+<h3 id="UML中的视图"><a href="#UML中的视图" class="headerlink" title="UML中的视图"></a>UML中的视图</h3><p>UML中的视图包括用例视图（Use Case View）、逻辑视图（Logical View）、实现视图（Implementation View）、进程视图（Process View）、部署视图（Deployment View）等，</p>
+<p>这5个视图被称作”4+1”视图.如下图所示：<br><img src="/image/uml_view.jpg" alt></p>
+<ul>
+<li>逻辑视图:逻辑视图关注功能，不仅包括用户可见的功能，还包括为实现用户功能而必须提供的”辅助功能模块”；它们可能是逻辑层、功能模块等。</li>
+<li>开发视图:开发视图关注程序包，不仅包括要编写的源程序，还包括可以直接使用的第三方SDK和现成框架、类库，以及开发的系统将运行于其上的系统软件或中间件。</li>
+<li>处理视图:处理视图关注进程、线程、对象等运行时概念，以及相关的并发、同步、通信等问题。</li>
+<li>物理视图:物理视图关注”目标程序及其依赖的运行库和系统软件”最终如何安装或部署到物理机器，以及如何部署机器和网络来配合软件系统的可靠性、可伸缩性等要求。</li>
+</ul>
+<blockquote>
+<ul>
+<li>物理视图和处理视图的关系：处理视图特别关注目标程序的动态执行情况，而物理视图重视目标程序的静态位置问题；物理视图是综合考虑软件系统和整个IT系统相互影响的架构视图。</li>
+<li>物理视图和处理视图的关系：处理视图特别关注目标程序的动态执行情况，而物理视图重视目标程序的静态位置问题；物理视图是综合考虑软件系统和整个IT系统相互影响的架构视图。</li>
+<li>处理视图和开发视图的关系：开发视图一般偏重程序包在编译时期的静态依赖关系，而这些程序运行起来之后会表现为对象、线程、进程，处理视图比较关注的正是这些运行时单元的交互问题。</li>
+</ul>
+</blockquote>
+<h3 id="UML定义了5类，10种模型图"><a href="#UML定义了5类，10种模型图" class="headerlink" title="UML定义了5类，10种模型图"></a>UML定义了5类，10种模型图</h3><ol>
+<li>用例图（Use Case Diagram）： 展示系统外部的各类执行者与系统提供的各种用例之间的关系</li>
+<li>静态图<ol>
+<li>类图（Class diagram）：展示系统中类的静态结构(类是指具有相同属性和行为的对象，类图用来描述系统中各种类之间的静态结构)</li>
+<li>对象图（Object diagram）：是类图的一种实例化图(对象图是对类图的一种实例化)</li>
+<li>包图（Package diagram）：是一种分组机制。在UML1.1版本中，包图不再看作一种独立的模型图)</li>
+</ol>
+</li>
+<li>行为图<ol>
+<li>状态图（State diagram）：描述一类对象具有的所有可能的状态及其转移关系(它展示对象所具有的所有可能的状态以及特定事件发生时状态的转移情况)</li>
+<li>活动图（Activity Diagrams）：展示系统中各种活动的执行流程(各种活动的执行顺序、执行流程)</li>
+</ol>
+</li>
+<li>交互图<ol>
+<li>顺序图（Sequence Diagram）：展示对象之间的一种动态协作关系(一组对象组成，随时间推移对象之间交换消息的过程，突出时间关系)</li>
+<li>合作图Collaboration diagram：从另一个角度展示对象之间的动态协作关系(对象间动态协作关系，突出消息收发关系)</li>
+</ol>
+</li>
+<li>实现图<ol>
+<li>构件图（Component Diagram）：展示程序代码的物理结构(描述程序代码的组织结构，各种构件之间的依赖关系)</li>
+<li>配置图（Configuration diagram）：展示软件在硬件环境中(特别是在分布式及网络环境中)的配置关系(系统中硬件和软件的物理配置情况和系统体系结构)</li>
+</ol>
+</li>
+</ol>
+<h3 id="UML建模工具"><a href="#UML建模工具" class="headerlink" title="UML建模工具"></a>UML建模工具</h3><p>市面上UML建模工具很多，比较流行的有Rational Rose ，Microsoft Visio、Enterprise Architect 、Visual UML等。《UML建模-面向对象设计》系列文章使用的UML建模工具是Enterprise Architect 7.0，此工具还是比较好用的。</p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/18/uml/01 UML介绍/">http://yoursite.com/2018/05/18/uml/01 UML介绍/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a></div><div class="post-nav"><a class="pre" href="/2018/05/19/uml/02 用例图（Use Case）/">UML-用例图</a><a class="next" href="/2017/01/12/mysql/数据表命令/">数据库表命令</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

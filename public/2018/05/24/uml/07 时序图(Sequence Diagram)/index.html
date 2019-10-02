@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML-时序图 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML-时序图</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML-时序图</h1><div class="post-meta">May 24, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#时序图（Sequence-Diagram）"><span class="toc-number">1.</span> <span class="toc-text">时序图（Sequence Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时序图元素（Sequence-Diagram-Elements）"><span class="toc-number">1.2.</span> <span class="toc-text">时序图元素（Sequence Diagram Elements）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时序图的作用"><span class="toc-number">1.3.</span> <span class="toc-text">时序图的作用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协作图"><span class="toc-number">2.</span> <span class="toc-text">协作图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#作用"><span class="toc-number">2.1.</span> <span class="toc-text">作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#协作图的组成"><span class="toc-number">2.2.</span> <span class="toc-text">协作图的组成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时序图和协作图的对比"><span class="toc-number">3.</span> <span class="toc-text">时序图和协作图的对比</span></a></li></ol></div></div><div class="post-content"><h3 id="时序图（Sequence-Diagram）"><a href="#时序图（Sequence-Diagram）" class="headerlink" title="时序图（Sequence Diagram）"></a>时序图（Sequence Diagram）</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote>
+<p>时序图（Sequence Diagram）是显示对象之间交互的图，这些对象是按时间顺序排列的。顺序图中显示的是参与交互的对象及其对象之间消息交互的顺序。时序图中包括的建模元素主要有：对象（Actor）、生命线（Lifeline）、控制焦点（Focus of control）、消息（Message）等等。</p>
+</blockquote>
+<h4 id="时序图元素（Sequence-Diagram-Elements）"><a href="#时序图元素（Sequence-Diagram-Elements）" class="headerlink" title="时序图元素（Sequence Diagram Elements）"></a>时序图元素（Sequence Diagram Elements）</h4><ul>
+<li><p>角色（Actor）</p>
+<blockquote>
+<p>系统角色，可以是人、及其甚至其他的系统或者子系统。</p>
+</blockquote>
+</li>
+<li><p>对象（Object）</p>
+<blockquote>
+<p>对象包括三种命名方式：</p>
+<ul>
+<li>第一种方式包括对象名和类名；</li>
+<li>第二中方式只显示类名不显示对象名，即表示他是一个匿名对象；</li>
+<li>第三种方式只显示对象名不显示类明。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>生命线（Lifeline）</p>
+<blockquote>
+<p>生命线在顺序图中表示为从对象图标向下延伸的一条虚线，表示对象存在的时间，如下图<br><br><img src="image/Sequence/%E7%94%9F%E5%91%BD%E7%BA%BF.png" alt></p>
+</blockquote>
+</li>
+<li><p>控制焦点（Focus of Control）</p>
+<blockquote>
+<p>控制焦点是顺序图中表示时间段的符号，在这个时间段内对象将执行相应的操作。用小矩形表示，如下图。<br><br><img src="image/Sequence/%E6%8E%A7%E5%88%B6%E7%84%A6%E7%82%B9.png" alt></p>
+</blockquote>
+</li>
+<li><p>消息（Message）</p>
+<blockquote>
+<p>消息一般分为</p>
+<ul>
+<li>同步消息（Synchronous Message）<br><br>消息的发送者把控制传递给消息的接收者，然后停止活动，等待消息的接收者放弃或者返回控制。用来表示同步的意义。</li>
+<li>异步消息（Asynchronous Message）<br><br>消息发送者通过消息把信号传递给消息的接收者，然后继续自己的活动，不等待接受者返回消息或者控制。异步消息的接收者和发送者是并发工作的。</li>
+<li>返回消息（Return Message）<br><br>返回消息表示从过程调用返回<br><br><img src="image/Sequence/%E6%B6%88%E6%81%AF.png" alt></li>
+</ul>
+</blockquote>
+</li>
+<li><p>自关联消息（Self-Message）</p>
+<blockquote>
+<p>示方法的自身调用以及一个对象内的一个方法调用另外一个方法。<br><br><img src="image/Sequence/%E8%87%AA%E5%85%B3%E8%81%94%E6%B6%88%E6%81%AF.png" alt></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="时序图的作用"><a href="#时序图的作用" class="headerlink" title="时序图的作用"></a>时序图的作用</h4><ol>
+<li>确认和丰富一个使用语境的逻辑表达。</li>
+<li>细化用例，将用例表达的需求进一步精细表达。</li>
+<li>有效地描述个各类的职责一级各类具有相应的原因。</li>
+</ol>
+<h3 id="协作图"><a href="#协作图" class="headerlink" title="协作图"></a>协作图</h3><blockquote>
+<p>在一定的语境中一组对象一级实现某些行为的对象间的相互作用。协作图就是表现对象协作关系的图。</p>
+</blockquote>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><ol>
+<li>确认和丰富一个使用语境的逻辑表达。</li>
+<li>显示对象机器交互关系的空间组织结构</li>
+<li>表现一个类操作的实现</li>
+</ol>
+<h4 id="协作图的组成"><a href="#协作图的组成" class="headerlink" title="协作图的组成"></a>协作图的组成</h4><p>由对象、消息和；链等构成。对象和消息的概念与时序图中的概念相同。主要的特点是链。</p>
+<ul>
+<li>链：两个或多个对象之间的独立连接，是对象引用元组，是关联的实例。</li>
+<li>链的表示形式：一个或多个相连的线或弧。</li>
+</ul>
+<h3 id="时序图和协作图的对比"><a href="#时序图和协作图的对比" class="headerlink" title="时序图和协作图的对比"></a>时序图和协作图的对比</h3><blockquote>
+<p>时序图和序列图表示的信息一样，只是方法不同，可通过适当的方式进行转化。</p>
+</blockquote>
+<p>  不同点：</p>
+<ul>
+<li>协作图明确了角色的关系，通过协作图角色来限定协作中的对象或链。</li>
+<li>协作图不将时间作为单独的维来表示，必须使用顺序号来判断信息的顺序以及并行线程。</li>
+<li>序列图和协作图都表示对象间的交互作用，序列图侧重时间顺序，协作图侧重对象间的关系，时间顺序可以从对象流经的顺序编号中获得。</li>
+<li>序列图被用于表示方案，而协作图被用于过程的详细设计。</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/24/uml/07 时序图(Sequence Diagram)/">http://yoursite.com/2018/05/24/uml/07 时序图(Sequence Diagram)/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a><a href="/tags/时序图/">时序图</a></div><div class="post-nav"><a class="pre" href="/2019/02/15/dart/02_Dart初识/">Dart初识</a><a class="next" href="/2018/05/23/uml/06 部署图(Deployment Diagram)/">UML-部署图</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

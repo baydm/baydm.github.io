@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Dart运算符 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Dart运算符</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Dart运算符</h1><div class="post-meta">Feb 17, 2019<span> | </span><span class="category"><a href="/categories/Dart/">Dart</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#按照运算符优先级高低进行排序"><span class="toc-number">1.</span> <span class="toc-text">按照运算符优先级高低进行排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#算术运算符"><span class="toc-number">2.</span> <span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相等和关系运算符"><span class="toc-number">3.</span> <span class="toc-text">相等和关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型测试操作符"><span class="toc-number">4.</span> <span class="toc-text">类型测试操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值运算符"><span class="toc-number">5.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复合赋值操作符"><span class="toc-number">6.</span> <span class="toc-text">复合赋值操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑运算符"><span class="toc-number">7.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#位和移位运算"><span class="toc-number">8.</span> <span class="toc-text">位和移位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件表达式"><span class="toc-number">9.</span> <span class="toc-text">条件表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#级联表示法"><span class="toc-number">10.</span> <span class="toc-text">级联表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它运算符"><span class="toc-number">11.</span> <span class="toc-text">其它运算符</span></a></li></ol></div></div><div class="post-content"><h3 id="按照运算符优先级高低进行排序"><a href="#按照运算符优先级高低进行排序" class="headerlink" title="按照运算符优先级高低进行排序"></a>按照运算符优先级高低进行排序</h3><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>操作符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一元后置操作符</td>
+<td>expr++    expr–    ()    []    .    ?.</td>
+</tr>
+<tr>
+<td>一元前置操作符</td>
+<td>-expr    !expr    ~expr    ++expr    –expr</td>
+</tr>
+<tr>
+<td>乘除运算</td>
+<td>*    /    %    ~/</td>
+</tr>
+<tr>
+<td>加减运算</td>
+<td>+    -</td>
+</tr>
+<tr>
+<td>移位运算</td>
+<td>&lt;&lt;    &gt;&gt;</td>
+</tr>
+<tr>
+<td>按位与</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>按位异或</td>
+<td>^</td>
+</tr>
+<tr>
+<td>按位或</td>
+<td>`</td>
+</tr>
+<tr>
+<td>关系和类型测试</td>
+<td>&gt;=    &gt;    &lt;=    &lt;    as    is    is!</td>
+</tr>
+<tr>
+<td>相等</td>
+<td>==    ！=</td>
+</tr>
+<tr>
+<td>逻辑与</td>
+<td>&amp;&amp;</td>
+</tr>
+<tr>
+<td>逻辑或</td>
+<td>`</td>
+</tr>
+<tr>
+<td>是否为null</td>
+<td>??</td>
+</tr>
+<tr>
+<td>天健判断（三元运算）</td>
+<td>expr1 ? expr2 : expr3</td>
+</tr>
+<tr>
+<td>级联</td>
+<td>..</td>
+</tr>
+<tr>
+<td>赋值</td>
+<td>=    *=    /=    ~/=    %=    +=    -=    &lt;&lt;=    &gt;&gt;=    &amp;=    ^=</td>
+</tr>
+<tr>
+<td>&gt; 当使用操作符后，就变成了表达式。</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>加法</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+</tr>
+<tr>
+<td>-expr</td>
+<td>一元减号，也称为否定</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除法</td>
+</tr>
+<tr>
+<td>~/</td>
+<td>取模运算</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取余运算</td>
+</tr>
+</tbody></table>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span>(<span class="number">2</span> + <span class="number">3</span> == <span class="number">5</span>);</span><br><span class="line"><span class="keyword">assert</span>(<span class="number">2</span> - <span class="number">3</span> == <span class="number">-1</span>);</span><br><span class="line"><span class="keyword">assert</span>(<span class="number">2</span> * <span class="number">3</span> == <span class="number">6</span>);</span><br><span class="line"><span class="keyword">assert</span>(<span class="number">5</span> / <span class="number">2</span> == <span class="number">2.5</span>); <span class="comment">// Result is a double</span></span><br><span class="line"><span class="keyword">assert</span>(<span class="number">5</span> ~/ <span class="number">2</span> == <span class="number">2</span>); <span class="comment">// Result is an int</span></span><br><span class="line"><span class="keyword">assert</span>(<span class="number">5</span> % <span class="number">2</span> == <span class="number">1</span>); <span class="comment">// Remainder</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span>(<span class="string">'5/2 = <span class="subst">$&#123;<span class="number">5</span> ~/ <span class="number">2</span>&#125;</span> r <span class="subst">$&#123;<span class="number">5</span> % <span class="number">2</span>&#125;</span>'</span> == <span class="string">'5/2 = 2 r 1'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Dart还支持前缀和后缀递增和递减运算符。</span></span><br><span class="line"><span class="keyword">var</span> a, b;</span><br><span class="line"></span><br><span class="line">a = <span class="number">0</span>;</span><br><span class="line">b = ++a; <span class="comment">// Increment a before b gets its value.</span></span><br><span class="line"><span class="keyword">assert</span>(a == b); <span class="comment">// 1 == 1</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">0</span>;</span><br><span class="line">b = a++; <span class="comment">// Increment a AFTER b gets its value.</span></span><br><span class="line"><span class="keyword">assert</span>(a != b); <span class="comment">// 1 != 0</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">0</span>;</span><br><span class="line">b = --a; <span class="comment">// Decrement a before b gets its value.</span></span><br><span class="line"><span class="keyword">assert</span>(a == b); <span class="comment">// -1 == -1</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">0</span>;</span><br><span class="line">b = a--; <span class="comment">// Decrement a AFTER b gets its value.</span></span><br><span class="line"><span class="keyword">assert</span>(a != b); <span class="comment">// -1 != 0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="相等和关系运算符"><a href="#相等和关系运算符" class="headerlink" title="相等和关系运算符"></a>相等和关系运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>==</td>
+<td>相等</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+</tbody></table>
+<h3 id="类型测试操作符"><a href="#类型测试操作符" class="headerlink" title="类型测试操作符"></a>类型测试操作符</h3><blockquote>
+<p>a, is, and is!操作符可以方便地在运行时检查类型。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>as</td>
+<td>形态转换</td>
+</tr>
+<tr>
+<td>is</td>
+<td>如果对象具有指定的类型，则为True</td>
+</tr>
+<tr>
+<td>is!</td>
+<td>如果对象具有指定的类型，则为False</td>
+</tr>
+</tbody></table>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><blockquote>
+<p>??=操作符仅仅在变量为null时会赋值。未初始化和后来手动赋值为null的情况都会执行此操作赋值。</p>
+</blockquote>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Assign value to a</span></span><br><span class="line">a = value;</span><br><span class="line"><span class="comment">// Assign value to b if b is null; otherwise, b stays the same</span></span><br><span class="line"><span class="comment">// 仅仅在b为空的情况下b被赋值value否则b的值不变</span></span><br><span class="line">b ??= value;</span><br></pre></td></tr></table></figure>
+
+<h3 id="复合赋值操作符"><a href="#复合赋值操作符" class="headerlink" title="复合赋值操作符"></a>复合赋值操作符</h3><blockquote>
+<p>如+=将操作与赋值合并。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><code>=</code></th>
+<th><code>-=</code></th>
+<th><code>/=</code></th>
+<th><code>%=</code></th>
+<th><code>&gt;&gt;=</code></th>
+<th><code>^=</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>+=</code></td>
+<td><code>*=</code></td>
+<td><code>~/=</code></td>
+<td><code>&lt;&lt;=</code></td>
+<td><code>&amp;=</code></td>
+<td>`</td>
+</tr>
+</tbody></table>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><blockquote>
+<p>可以使用逻辑运算符组合布尔表达式或取反布尔表达式。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>!expr</code></td>
+<td>对!后的表达式结果取反(如果表达式结果为false则表达式前加！使其变为true，反之亦然)</td>
+</tr>
+<tr>
+<td>`</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>逻辑与（且）</td>
+</tr>
+</tbody></table>
+<h3 id="位和移位运算"><a href="#位和移位运算" class="headerlink" title="位和移位运算"></a>位和移位运算</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&amp;</code></td>
+<td>按位与</td>
+</tr>
+<tr>
+<td>`</td>
+<td>`</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>按位异或</td>
+</tr>
+<tr>
+<td><code>~expr</code></td>
+<td>按位取反</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>左移</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>右移</td>
+</tr>
+</tbody></table>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> value = <span class="number">0x22</span>;</span><br><span class="line"><span class="keyword">final</span> bitmask = <span class="number">0x0f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span>((value &amp; bitmask) == <span class="number">0x02</span>); <span class="comment">// AND</span></span><br><span class="line"><span class="keyword">assert</span>((value &amp; ~bitmask) == <span class="number">0x20</span>); <span class="comment">// AND NOT</span></span><br><span class="line"><span class="keyword">assert</span>((value | bitmask) == <span class="number">0x2f</span>); <span class="comment">// OR</span></span><br><span class="line"><span class="keyword">assert</span>((value ^ bitmask) == <span class="number">0x2d</span>); <span class="comment">// XOR</span></span><br><span class="line"><span class="keyword">assert</span>((value &lt;&lt; <span class="number">4</span>) == <span class="number">0x220</span>); <span class="comment">// Shift left</span></span><br><span class="line"><span class="keyword">assert</span>((value &gt;&gt; <span class="number">4</span>) == <span class="number">0x02</span>); <span class="comment">// Shift right</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果条件为真，则计算expr1(并返回其值);否则，计算并返回expr2的值。</span></span><br><span class="line">condition ? expr1 : expr2</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果expr1是非空的，则返回其值;否则，计算并返回expr2的值。</span></span><br><span class="line">expr1 ?? expr2</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基于布尔表达式的结果选择赋值</span></span><br><span class="line"><span class="keyword">var</span> visibility = isPublic ? <span class="string">'public'</span> : <span class="string">'private'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 布尔表达式只想判断值是否为null</span></span><br><span class="line"><span class="built_in">String</span> playerName(<span class="built_in">String</span> name) =&gt; name ?? <span class="string">'Guest'</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="级联表示法"><a href="#级联表示法" class="headerlink" title="级联表示法"></a>级联表示法</h3><blockquote>
+<p><code>..</code> 允许您在同一个对象上创建一个操作序列。</p>
+</blockquote>
+<h3 id="其它运算符"><a href="#其它运算符" class="headerlink" title="其它运算符"></a>其它运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>()</code></td>
+<td>功能函数</td>
+<td>表示一个函数调用</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>访问列表</td>
+<td>引用列表中指定索引处的值</td>
+</tr>
+<tr>
+<td><code>·</code></td>
+<td>访问成员</td>
+<td>表示表达式的属性;例如:foo.bar从表达式foo中选择属性bar，如果foo为null，会抛出异常</td>
+</tr>
+<tr>
+<td><code>?.</code></td>
+<td>根据条件访问成员</td>
+<td>和(.)相似，但是左边的操作数可以为空；例如： foo?.bar 从foo的表达式中选择bar属性，如果foo为空则返回null</td>
+</tr>
+</tbody></table>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2019/02/17/dart/04_Dart运算符/">http://yoursite.com/2019/02/17/dart/04_Dart运算符/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/dart/">dart</a></div><div class="post-nav"><a class="pre" href="/2019/02/17/dart/05_Dart流程控制/">Dart流程控制</a><a class="next" href="/2019/02/16/dart/03_Dart函数/">Dart函数</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

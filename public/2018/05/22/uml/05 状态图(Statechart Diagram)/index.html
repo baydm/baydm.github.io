@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML-状态图 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML-状态图</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML-状态图</h1><div class="post-meta">May 22, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#UML建模之状态图（Statechart-Diagram）"><span class="toc-number">1.</span> <span class="toc-text">UML建模之状态图（Statechart Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介（Brief-introduction）"><span class="toc-number">1.1.</span> <span class="toc-text">简介（Brief introduction）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#状态图元素（State-Diagram-Elements）"><span class="toc-number">1.2.</span> <span class="toc-text">状态图元素（State Diagram Elements）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#状态图的作用："><span class="toc-number">1.3.</span> <span class="toc-text">状态图的作用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#状态图练习"><span class="toc-number">1.4.</span> <span class="toc-text">状态图练习</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#订单成立状态主要有："><span class="toc-number">1.4.1.</span> <span class="toc-text">订单成立状态主要有：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#分析："><span class="toc-number">1.4.2.</span> <span class="toc-text">分析：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#参考资料"><span class="toc-number">1.4.3.</span> <span class="toc-text">参考资料</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h3 id="UML建模之状态图（Statechart-Diagram）"><a href="#UML建模之状态图（Statechart-Diagram）" class="headerlink" title="UML建模之状态图（Statechart Diagram）"></a>UML建模之状态图（Statechart Diagram）</h3><h4 id="简介（Brief-introduction）"><a href="#简介（Brief-introduction）" class="headerlink" title="简介（Brief introduction）"></a>简介（Brief introduction）</h4><blockquote>
+<p>状态图（Statechart Diagram）主要用于描述一个对象在其生存期间的动态行为，表现为一个对象所经历的状态序列，引起状态转移的事件（Event），以及因状态转移而伴随的动作（Action）。一般可以用状态机对一个对象的生命周期建模，状态图用于显示状态机（State Machine Diagram），重点在与描述状态图的控制流。</p>
+</blockquote>
+<ul>
+<li>状态机<blockquote>
+<p>我们理解为记录下给定时刻状态的机器，根据不同的输入对每个给定的变化而改变其状态或引发一个动作。<br>在UML中，状态机由对象的各个状态和连接这些状态的转换组成，是展示状态与状态转换的图。<br>状态图本质上就是一个状态机或是状态机的特殊情况。由表示状态的节点和表示状态之间转换的带箭头的直线组成。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="状态图元素（State-Diagram-Elements）"><a href="#状态图元素（State-Diagram-Elements）" class="headerlink" title="状态图元素（State Diagram Elements）"></a>状态图元素（State Diagram Elements）</h4><p>包括以下内容</p>
+<ul>
+<li>状态名：区分状态的名称</li>
+<li>内部活动</li>
+<li>内部装换</li>
+<li>入口和出口动作</li>
+<li>嵌套状态<ul>
+<li>简单状态：语义上不可分割、对象保持一定属性值，没有子结构</li>
+<li>组成状态：<ul>
+<li>内部嵌套子状态的状体</li>
+<li>初始</li>
+<li>终止</li>
+<li>顺序：多个子状态之间是互斥的、不能同时存在</li>
+<li>并发：可能有两个或多个并发的子状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>历史状态：伪状态，说明组成状态曾经有的子状态</li>
+</ul>
+<ol>
+<li><p>状态名（States）</p>
+<blockquote>
+<p>指在对象的生命周期中的某个条件或者状况，在此期间对象将满足某些条件、执行某些活动活活等待某些事件。所有对象都有状态，状态是对象执行了一系列活动的结果，当某个事件发生后，对象的状态将发生变化。</p>
+</blockquote>
+<ul>
+<li>状态用圆角矩形表示</li>
+<li>初态和终态（Initial and Final States）初态用实心圆点表示，终态用圆形内嵌圆点表示。</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>转移（Transitions）</p>
+<blockquote>
+<p>是两个状态之间的一种关系，表示对象将在源状态（Source State）中执行一定的动作，并在某个特定事件发生而且某个特定的警界条件满足时进入目标状态（Target State）</p>
+</blockquote>
+<ul>
+<li>事件标记（Trigger）：是转移的诱因，可以是一个信号，事件、条件变化（a change in some condition）和时间表达式。</li>
+<li>警界条件（Guard Condition）：当警界条件满足时，事件才会引发转移（Transition）。</li>
+<li>结果（Effect）：对象状态转移后的结果。</li>
+</ul>
+<p>包括以下内容</p>
+<ul>
+<li>源状态：激活转换之前所处的状态</li>
+<li>目标状态：转换完成后对象所处的状态</li>
+<li>动作：简短的计算处理过程或一组可执行的语句</li>
+<li>监护条件：布尔表达式</li>
+<li>事件触发器：引起愿状态的事件</li>
+</ul>
+</li>
+<li><p>事件/动作（State Actions）</p>
+<blockquote>
+<p>是一个可执行的原子操作,也就是说动作是不可中断的，其执行时间是可忽略不计的。</p>
+</blockquote>
+<p>包括以下内容</p>
+<ul>
+<li>Signal</li>
+<li>Call</li>
+<li>Change</li>
+<li>Time</li>
+</ul>
+</li>
+<li><p>自身转移（Self-Transitions）</p>
+<blockquote>
+<p>状态可以有返回自身状态的转移，称之为自身转移（Self-Transitions）</p>
+</blockquote>
+</li>
+<li><p>组合状态（Compound States）</p>
+<blockquote>
+<p>嵌套在另外一个状态中的状态称之为子状态（sub-state）,一个含有子状态的状态被称作组合状态（Compound States）. 如下图，【Check PIN】是组合状态，【Enter PIN】是子状态。</p>
+</blockquote>
+</li>
+<li><p>进入节点（Entry Point）</p>
+<blockquote>
+<p>如下图所示，由于一些原因并不会执行初始化（initialization），而是直接通过一个节点进入状态【Ready】，则此节点称之为进入节点（Entry Point）<br><br><img src="image/Statechart/%E8%BF%9B%E5%85%A5%E8%8A%82%E7%82%B9.png" alt></p>
+</blockquote>
+</li>
+<li><p>退出节点（Exit Point）</p>
+<blockquote>
+<p><img src="image/Statechart/%E9%80%80%E5%87%BA%E8%8A%82%E7%82%B9.png" alt></p>
+</blockquote>
+</li>
+<li><p>历史状态（History States）</p>
+<blockquote>
+<p> 历史状态是一个伪状态（Pseudostate）,其目的是记住从组合状态中退出时所处的子状态，当再次进入组合状态，可直接进入这个子状态，而不是再次从组合状态的初态开始。<br><br><img src="image/Statechart/%E5%8E%86%E5%8F%B2%E7%8A%B6%E6%80%81.png" alt><br><br>在上图的状态图中，正常的状态顺序是:【Washing】- &gt;【Rinsing】-&gt;【Spinning】。<br><br>如果是从状态【Rinsing】突然停电（Power Cut）退出，,洗衣机停止工作进入状态【Power Off】，当电力恢复时直接进入状态【Running】。</p>
+</blockquote>
+</li>
+<li><p>并发区域（Concurrent Regions）</p>
+<blockquote>
+<p> 状态图可以分为区域，而区域又包括退出或者当前执行的子状态。说明组合状态在某一时刻可以同时达到多个子状态。如下图刹车系统，同时进入前刹车【Applying Front Brakes】状态和后刹车【Applying Rear Brakes】状态。<br><br><img src="image/Statechart/%E5%B9%B6%E5%8F%91%E5%8C%BA%E5%9F%9F.png" alt></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="状态图的作用："><a href="#状态图的作用：" class="headerlink" title="状态图的作用："></a>状态图的作用：</h4><ol>
+<li>清晰描述状态之间的转换顺序，通过转换顺序可以清晰看出事件的执行顺序</li>
+<li>清晰的事件顺序有利于程序员在开发程序时避免出现事件错序的情况</li>
+<li>清晰地描述了状态转换时所必须触发德尔事件、监护条件和动作等影响转换的因素，有利于程序员汇总非法事件的进入</li>
+<li>通过判断更好地描述工作流因为不同的条件发生的分支</li>
+</ol>
+<h4 id="状态图练习"><a href="#状态图练习" class="headerlink" title="状态图练习"></a>状态图练习</h4><p><img src="image/Statechart/%E7%8A%B6%E6%80%81%E5%9B%BE%E7%BB%83%E4%B9%A0.png" alt><br></p>
+<h5 id="订单成立状态主要有："><a href="#订单成立状态主要有：" class="headerlink" title="订单成立状态主要有："></a>订单成立状态主要有：</h5><ul>
+<li>订单成立</li>
+<li>订单取消（Guard:会员订单-缴款期限已过期）</li>
+<li>备货中（Guard:已付款、订单成立、库存量足够）</li>
+<li>出货中（Effect:扣除商品可接单量及移除购物车中的购买资料）</li>
+<li>出货确认（Guard:实际配达日及发票代码、号码均不为空值）</li>
+<li>出货完毕（Guard:实际配达日不为空）</li>
+<li>出货失败</li>
+<li>订单成立（Guard:出货完毕，已付款、鉴赏期结束日期 小于等于 [系统日期]）</li>
+</ul>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><ol>
+<li>购物车生成订单进入状态【订单成立】</li>
+<li>系统检测订单已经付款并且库存量足够，则进入状态【备货中】</li>
+<li>物流发货，进入状态【发货中】，状态转移为【发货中】后，需要做的操作有“扣除商品可接单量及移除购物车中的购买资料”</li>
+<li>发货完毕后，状态分为【出货确认】和状态【出货失败】，如果状态是【出货失败】，则【结束】，如果状态为【出货确认】，则进入下一步。</li>
+<li>配货人员填写实际配达日期，进入状态【出货完毕】。</li>
+<li>如果”已付款、鉴赏期结束日期 小于等于 [系统日期]”,则【订单成立】。</li>
+</ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p><a href="http://www.cnblogs.com/ywqu/archive/2009/12/17/1626043.html" target="_blank" rel="noopener">http://www.cnblogs.com/ywqu/archive/2009/12/17/1626043.html</a></p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/22/uml/05 状态图(Statechart Diagram)/">http://yoursite.com/2018/05/22/uml/05 状态图(Statechart Diagram)/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a><a href="/tags/状态图/">状态图</a></div><div class="post-nav"><a class="pre" href="/2018/05/23/uml/06 部署图(Deployment Diagram)/">UML-部署图</a><a class="next" href="/2018/05/21/uml/04 活动图(Activity Diagram)/">UML-活动图</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
