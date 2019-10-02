@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C语言include和变量 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C语言include和变量</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C语言include和变量</h1><div class="post-meta">Dec 19, 2015<span> | </span><span class="category"><a href="/categories/C语言/">C语言</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见函数"><span class="toc-number">1.</span> <span class="toc-text">常见函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#include"><span class="toc-number">2.</span> <span class="toc-text">#include</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多源文件开发"><span class="toc-number">3.</span> <span class="toc-text">多源文件开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用UNIX指令"><span class="toc-number">4.</span> <span class="toc-text">常用UNIX指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译C程序"><span class="toc-number">5.</span> <span class="toc-text">编译C程序</span></a></li></ol></div></div><div class="post-content"><h2 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h2><ul>
+<li>main函数<br>main函数时整个C程序的入口，整个C程序中也有且仅有一个main函数</li>
+<li>printf函数<br>在屏幕上输出内容，使用前必须加 <code>#incluce &lt;stdio.h&gt;</code></li>
+</ul>
+<h2 id="include"><a href="#include" class="headerlink" title="#include"></a><code>#include</code></h2><ul>
+<li><code>#include</code>指令介绍<ul>
+<li><code>#include</code> 是C语言的<code>预处理指令</code>之一。<br>在编译之前做的处理，预处理指令一般以<code>#</code>开头    </li>
+<li><code>#include</code>指令后面会跟着一个文件名，此时，会将该文件内容包含到当前文件中。</li>
+<li>如果本包含的文件拓展名为 <code>.h</code> 则称为头文件(Header File)。</li>
+<li><code>#include</code>指令不仅限于 <code>.h</code> 头文件，可以包含任何白安逸器能识别的C/C++代码文件 </li>
+</ul>
+</li>
+<li><code>#include &lt;&gt;</code>和<code>#include &quot;&quot;</code>区别（主要是检索顺序不同）<ul>
+<li><code>#include &lt;&gt;</code> 检索顺序：<br>父文件所在文件夹 → 父文件的父文件所在文件夹 → 编译器设置的include路径 → 系统INCLUDE环境变量</li>
+<li><code>#include &quot; &quot;</code> 检索顺序：<br>编译器设置的include路径 → 系统INCLUDE环境变量</li>
+</ul>
+</li>
+<li><code>stdio.h</code><ul>
+<li>是C语言函数库中的一个头文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="多源文件开发"><a href="#多源文件开发" class="headerlink" title="多源文件开发"></a>多源文件开发</h2><ol>
+<li>在编写第一个C程序的时候已经提到：我们编写的所有C语言代码都保存在拓展名为.c的源文件中，编写完毕后就进行编译、链接，最后运行程序。</li>
+<li>在实际开发过程中，项目做大了，源代码肯定非常多，很容易就上万行 代码了，甚至上十万、百万都有可能。这个时候如果把所有的代码都写到一个.c源文件中，那么这个文件将会非常庞大，也非常恶心，你可以想象一下，一个文件 有十几万行文字，不要说调试程序了，连阅读代码都非常困难。</li>
+<li>公司里面都是以团队开发为主，如果多个开发人员同时修改一个源文件，那就会带来很多麻烦的问题，比如张三修改的代码很有可能会抹掉李四之前添加的代码。</li>
+<li>因此，为了模块化开发，一般会将不同的功能写到不同的.c源文件中，这样的话，每个开发人员都负责修改不同的源文件，达到分工合作的目的，能够大大提高开发效率。也就是说，一个正常的C语言项目是由多个.c源文件构成。</li>
+</ol>
+<hr>
+<h2 id="常用UNIX指令"><a href="#常用UNIX指令" class="headerlink" title="常用UNIX指令"></a>常用UNIX指令</h2><table>
+<thead>
+<tr>
+<th align="left">指令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ls</td>
+<td align="left">列出当前目录下的所有内容（文件\文件夹）</td>
+</tr>
+<tr>
+<td align="left">pwd</td>
+<td align="left">显示出当前目录的名称</td>
+</tr>
+<tr>
+<td align="left">cd</td>
+<td align="left">改变当前操作的目录</td>
+</tr>
+<tr>
+<td align="left">who</td>
+<td align="left">显示当前用户名</td>
+</tr>
+<tr>
+<td align="left">clear</td>
+<td align="left">清除所有内容</td>
+</tr>
+<tr>
+<td align="left">mkdir</td>
+<td align="left">创建一个新目录</td>
+</tr>
+</tbody></table>
+<h2 id="编译C程序"><a href="#编译C程序" class="headerlink" title="编译C程序"></a>编译C程序</h2><ul>
+<li><p>编译one.c，生成one.o文件</p>
+<figure class="highlight cc"><figcaption><span>-c one.c```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 链接one.o，生成a.out文件</span><br><span class="line">```cc one.o</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行a.out</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 进制</span><br><span class="line">    进制：一种计数方式</span><br><span class="line">- 十进制</span><br><span class="line">由0、1、2….9十个基本数字组成；运算规则是“逢十进一”</span><br><span class="line">- 二进制</span><br><span class="line">特点：由0、1两个基本数字组成；运算规则是“逢二进一”</span><br><span class="line">书写形式：需要以0b或者0B开头，比如0b101</span><br><span class="line">- 八进制</span><br><span class="line">特点：由0~7八个基本数字组成；运算规则是“逢八进一”</span><br><span class="line">书写形式：在前面加个0，比如045</span><br><span class="line">- 十六进制</span><br><span class="line">特点：由0~9和A~F组成，A~F分别表示10~15；运算规则是“逢十六进一”</span><br><span class="line">书写形式：在前面加个0x或者0X，比如0x45</span><br><span class="line"></span><br><span class="line">## 位运算符</span><br><span class="line">运算符 | 作用  | 说明 |举例</span><br><span class="line"> -----|-------|----|---</span><br><span class="line">&amp;| 按位与|只有对应的两个二进位均为1时，结果位才为1，否则为0|1001 &amp; 0101 = 0001</span><br><span class="line">&amp;#x7c;| 按位或|只要对应的二个二进位有一个为1时，结果位就为1，否则为0|1001 &amp;#x7c; 0101 = 1101</span><br><span class="line">^ |按位异或|当对应的二进位相异（不相同）时，结果为1，否则为0|1001 ^ 101 = 1100</span><br><span class="line">~ |取反|各二进位进行取反（0变1，1变0）|~1001 = 0110</span><br><span class="line">&lt;&lt; |左移|各二进位全部左移n位，高位丢弃，低位补0|乘以2的n次方</span><br><span class="line">&amp;#x3e;&amp;#x3e; |右移|各二进位全部右移n位，保持符号位不变|是除以2的n次方</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>//使用位运算实现交换两个数的值<br>a = a^b;<br>b = b^a;<br>a = a^b;</p>
+<pre><code>## 变量的内存分析
+### 字节和地址
+- 内存以“字节为单位”，不同类型的变量在不同编译器环境下所占的空间也不同
+
+变量类型 | 16位编译器  | 32位编译器  | 64位编译器
+--|--|--|--
+char |1|1|1
+int |2|4|4
+float|4|4|4
+double|8|8|8
+- 变量存储单元的第一个字节的地址就是该变量的地址
+- 负数的二进制形式，就是对它的正数的二进制取反后加1
+
+## 类型说明符
+类型|说明|64位编译器
+--|--|--
+short|短型|2字节（16位）
+long|长型|8字节（64位）
+signed|有符号型
+unsigned|无符号型
+&gt;一般就是用来修饰int类型的，所以在使用时省略int。
+short int等价于short，long int等价于long，long long int等价于long long
+
+- signed和unsigned的区别就是它们的最高位是否要当做符号位，并不会像short和long那样改变数据的长度，即所占的字节数。
+- signed：表示有符号，也就是说最高位要当做符号位，所以包括正数、负数和0。其实int的最高位本来就是符号位，已经包括了正负数和0了，因此signed和int是一样的，signed等价于signed int，也等价于int。signed的取值范围是&lt;img src=&quot;http://www.forkosh.com/mathtex.cgi? -2^{31}&quot;&gt; ~ &lt;img src=&quot;http://www.forkosh.com/mathtex.cgi? 2^{31}-1&quot;&gt;
+- unsigned：表示无符号，也就是说最高位并不当做符号位，所 以不包括负数。在64bit编译器环境下面，int占用4个字节（32bit），因此unsigned的取值范围是：0000 0000 0000 0000 0000 0000 0000 0000 ~ 1111 1111 1111 1111 1111 1111 1111 1111，也就是0~&lt;img src=&quot;http://www.forkosh.com/mathtex.cgi? 2{32}-1&quot;&gt;
+
+## char类型（字符型）
+- 一个字符型变量占用1个字节，共8位。范围是&lt;img src=&quot;http://www.forkosh.com/mathtex.cgi? -2^7&quot;&gt;~&lt;img src=&quot;http://www.forkosh.com/mathtex.cgi? 2^7-1&quot;&gt;。
+- 不能用来存储汉字
+- 前面加&quot;\&quot;形成的字符，称为“转义字符”  
+
+转义字符|意义|ASCII码值
+--|--|--
+\n|回车|10
+\t|退格|9
+\\|\|92
+\&apos;|&apos;|39
+\&quot;|&quot;|34
+\0|空字符|0
+
+
+</code></pre></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2015/12/19/c/C语言include和变量/">http://yoursite.com/2015/12/19/c/C语言include和变量/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/c/">c</a></div><div class="post-nav"><a class="pre" href="/2015/12/20/c/C语言数组和字符串/">C语言数组和字符串</a><a class="next" href="/2015/12/19/c/C语言指针、结构体、枚举/">C语言指正|结构体|枚举</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/mysql/数据表命令/">数据库表命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/mysql/mysql常用信息函数/">MySql常用信息函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/11/git/Git远程操作详解/">Git远程操作详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/20/c/C语言的预处理指令和关键字/">C语言的预处理指令和关键字</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/20/c/C语言数组和字符串/">C语言数组和字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/19/c/C语言include和变量/">C语言include和变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/19/c/C语言指针、结构体、枚举/">C语言指正|结构体|枚举</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/19/c/C语言表达式和结构控制/">C语言表达式和结构控制</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
