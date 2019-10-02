@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML-用例图 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML-用例图</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML-用例图</h1><div class="post-meta">May 19, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用例图（Use-Case"><span class="toc-number">1.</span> <span class="toc-text">用例图（Use Case)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要元素"><span class="toc-number">1.1.</span> <span class="toc-text">主要元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-参与者-Actor"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 参与者(Actor)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-用例-Use-Case"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 用例(Use Case)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-子系统-Subsystem"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 子系统(Subsystem)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-关系"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-项目-Artifact"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 项目(Artifact)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-注释-Comment"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 注释(Comment)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含-include-、扩展-extend-、泛化-Inheritance-的区别"><span class="toc-number">1.2.</span> <span class="toc-text">包含(include)、扩展(extend)、泛化(Inheritance) 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何画Use-Case-用例视图"><span class="toc-number">1.3.</span> <span class="toc-text">如何画Use Case 用例视图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-新建工程"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 新建工程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-新建Use-Case-Diagram"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 新建Use Case Diagram</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-从左侧Toolbox中选择相关的对象，放到中部编辑区"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 从左侧Toolbox中选择相关的对象，放到中部编辑区</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例：图书管理系统的UC"><span class="toc-number">1.4.</span> <span class="toc-text">示例：图书管理系统的UC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#需求描述"><span class="toc-number">1.4.1.</span> <span class="toc-text">需求描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实际作图"><span class="toc-number">1.4.2.</span> <span class="toc-text">实际作图</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h2 id="用例图（Use-Case"><a href="#用例图（Use-Case" class="headerlink" title="用例图（Use Case)"></a>用例图（Use Case)</h2><p>主要用来描述“用户、需求、系统功能单元”之间的关系。它展示了一个外部用户能够观察到的系统功能模型图。</p>
+<h3 id="主要元素"><a href="#主要元素" class="headerlink" title="主要元素"></a>主要元素</h3><h4 id="1-参与者-Actor"><a href="#1-参与者-Actor" class="headerlink" title="1. 参与者(Actor)"></a>1. 参与者(Actor)</h4><blockquote>
+<p>表示与您的应用程序或系统进行交互的用户、组织或外部系统。用一个小人表示。<br><img src="image/actor.png" alt></p>
+</blockquote>
+<h4 id="2-用例-Use-Case"><a href="#2-用例-Use-Case" class="headerlink" title="2. 用例(Use Case)"></a>2. 用例(Use Case)</h4><blockquote>
+<p>用例就是外部可见的系统功能，对系统提供的服务进行描述。用椭圆表示。<br><img src="image/usecase.png" alt></p>
+</blockquote>
+<h4 id="3-子系统-Subsystem"><a href="#3-子系统-Subsystem" class="headerlink" title="3. 子系统(Subsystem)"></a>3. 子系统(Subsystem)</h4><blockquote>
+<p>用来展示系统的一部分功能，这部分功能联系紧密。<br><img src="image/uc/subsystem.png" alt></p>
+</blockquote>
+<h4 id="4-关系"><a href="#4-关系" class="headerlink" title="4. 关系"></a>4. 关系</h4><blockquote>
+<p>用例图中涉及的关系有：关联、泛化、包含、扩展。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>关系类型</th>
+<th>说明</th>
+<th>箭头指向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关联</td>
+<td>参与者与用例的关系</td>
+<td>消息接收方</td>
+</tr>
+<tr>
+<td>泛化</td>
+<td>参与者之间或者用例之间的关系</td>
+<td>父用例</td>
+</tr>
+<tr>
+<td>包括</td>
+<td>用例之间的关系</td>
+<td>分解出来的功能用例</td>
+</tr>
+<tr>
+<td>扩展</td>
+<td>用例之间的关系</td>
+<td>基础用例</td>
+</tr>
+<tr>
+<td><code>依赖-VS2010的用例模型图中，添加了依赖关系</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 关联(Association)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>表示参与者与用例之间的通信，任何一方都可发送或接受消息。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="image/uc/Association.png" alt>Â</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 泛化(Inheritance)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>就是通常理解的继承关系，子用例和父用例相似，但表现出更特别的行为；子用例将继承父用例的所有结构、行为和关系。子用例可以使用父用例的一段行为，也可以重载它。父用例通常是抽象的。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="image/uc/Inheritance.png" alt></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 包含(Include)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>包含关系用来把一个较复杂用例所表示的功能分解成较小的步骤。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="image/uc/Include.png" alt></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 扩展(Extend)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>扩展关系是指用例功能的延伸，相当于为基础用例提供一个附加功能。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="image/uc/Extend.png" alt></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 依赖(Dependency)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>以上4种关系，是UML定义的标准关系。但VS2010的用例模型图中，添加了依赖关系，用带箭头的虚线表示，表示源用例依赖于目标用例。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="image/uc/Dependency.png" alt></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="5-项目-Artifact"><a href="#5-项目-Artifact" class="headerlink" title="5. 项目(Artifact)"></a>5. 项目(Artifact)</h4><p><code>VS2010中引入了“项目”这样一个元素</code><br>用例图虽然是用来帮助人们形象地理解功能需求，但却没多少人能够通看懂它。很多时候跟用户交流甚至用Excel都比用例图强，以便让开发人员能够在用例图中链接一个普通文档。<br><img src="image/uc/Artifact.png" alt></p>
+<h4 id="6-注释-Comment"><a href="#6-注释-Comment" class="headerlink" title="6. 注释(Comment)"></a>6. 注释(Comment)</h4><p><img src="image/uc/Comment.png" alt></p>
+<h3 id="包含-include-、扩展-extend-、泛化-Inheritance-的区别"><a href="#包含-include-、扩展-extend-、泛化-Inheritance-的区别" class="headerlink" title="包含(include)、扩展(extend)、泛化(Inheritance) 的区别"></a>包含(include)、扩展(extend)、泛化(Inheritance) 的区别</h3><ul>
+<li>条件性：泛化中的子用例和include中的被包含的用例会无条件发生，而extend中的延伸用例的发生是有条件的；</li>
+<li>直接性：泛化中的子用例和extend中的延伸用例为参与者提供直接服务，而include中被包含的用例为参与者提供间接服务。</li>
+<li>对extend而言，延伸用例并不包含基础用例的内容，基础用例也不包含延伸用例的内容。</li>
+<li>对Inheritance而言，子用例包含基础用例的所有内容及其和其他用例或参与者之间的关系；</li>
+</ul>
+<h3 id="如何画Use-Case-用例视图"><a href="#如何画Use-Case-用例视图" class="headerlink" title="如何画Use Case 用例视图"></a>如何画Use Case 用例视图</h3><p>本人使用的工具是 <code>Start UML</code></p>
+<h4 id="1-新建工程"><a href="#1-新建工程" class="headerlink" title="1. 新建工程"></a>1. 新建工程</h4><pre><code>[file]-&gt;[New]</code></pre><h4 id="2-新建Use-Case-Diagram"><a href="#2-新建Use-Case-Diagram" class="headerlink" title="2. 新建Use Case Diagram"></a>2. 新建Use Case Diagram</h4><p><img src="image/uc/edit_add.png" alt></p>
+<h4 id="3-从左侧Toolbox中选择相关的对象，放到中部编辑区"><a href="#3-从左侧Toolbox中选择相关的对象，放到中部编辑区" class="headerlink" title="3. 从左侧Toolbox中选择相关的对象，放到中部编辑区"></a>3. 从左侧Toolbox中选择相关的对象，放到中部编辑区</h4><p><img src="image/uc/edit_drow.png" alt></p>
+<p>可以参考灵动生活的<a href="http://www.cnblogs.com/ywqu/archive/2009/12/03/1616232.html#_Toc247614719" target="_blank" rel="noopener">设计阶段如何画用例视图（Use-Case View）</a></p>
+<h3 id="示例：图书管理系统的UC"><a href="#示例：图书管理系统的UC" class="headerlink" title="示例：图书管理系统的UC"></a>示例：图书管理系统的UC</h3><h4 id="需求描述"><a href="#需求描述" class="headerlink" title="需求描述"></a>需求描述</h4><p>该系统是一套图书管理系统（主要是模仿学校当前的图书系统设置的），主要的服务人员为读者、图书管理员和系统管理员。</p>
+<ul>
+<li>读者：<ol>
+<li>办理图书借阅卡</li>
+<li>查询图书  （可分为查询已借图书和查询可借图书，这个关系可以理解成泛化）</li>
+<li>借阅图书    </li>
+<li>预约图书    </li>
+<li>还书</li>
+<li>续借图书</li>
+</ol>
+</li>
+<li>图书管理员：<ol>
+<li>借书</li>
+<li>还书</li>
+<li>管理图书信息，包括：<ul>
+<li>统计缺失的书</li>
+<li>订购新书</li>
+<li>入库新书（增加图书记录）</li>
+<li>更新/删除图书记录</li>
+</ul>
+</li>
+<li>收罚金，撤销违规记录</li>
+</ol>
+</li>
+<li>系统管理员：系统维护<ul>
+<li>日志维护</li>
+<li>权限维护</li>
+<li>用户管理</li>
+<li>数据库维护</li>
+</ul>
+</li>
+</ul>
+<h4 id="实际作图"><a href="#实际作图" class="headerlink" title="实际作图"></a>实际作图</h4><p><img src="image/uc/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.jpg" alt></p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/19/uml/02 用例图（Use Case）/">http://yoursite.com/2018/05/19/uml/02 用例图（Use Case）/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a><a href="/tags/用例图/">用例图</a></div><div class="post-nav"><a class="pre" href="/2018/05/20/uml/03 静态图/">UML-静态图</a><a class="next" href="/2018/05/18/uml/01 UML介绍/">UML介绍</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

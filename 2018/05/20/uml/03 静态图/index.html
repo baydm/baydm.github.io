@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML-静态图 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML-静态图</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML-静态图</h1><div class="post-meta">May 20, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#静态图"><span class="toc-number">1.</span> <span class="toc-text">静态图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类图（Class-diagram）"><span class="toc-number">1.1.</span> <span class="toc-text">类图（Class diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类的构成"><span class="toc-number">1.1.2.</span> <span class="toc-text">类的构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类图的元素"><span class="toc-number">1.1.3.</span> <span class="toc-text">类图的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#StartUML实现画图"><span class="toc-number">1.1.4.</span> <span class="toc-text">StartUML实现画图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#练习"><span class="toc-number">1.1.5.</span> <span class="toc-text">练习</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象图（Object-Diagram）"><span class="toc-number">1.2.</span> <span class="toc-text">对象图（Object Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构成"><span class="toc-number">1.2.2.</span> <span class="toc-text">构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#用途"><span class="toc-number">1.2.3.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类图和对象图的区别"><span class="toc-number">1.2.4.</span> <span class="toc-text">类图和对象图的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样例"><span class="toc-number">1.2.5.</span> <span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包图（Package-Diagram）"><span class="toc-number">1.3.</span> <span class="toc-text">包图（Package Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包名"><span class="toc-number">1.3.2.</span> <span class="toc-text">包名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拥有的元素"><span class="toc-number">1.3.3.</span> <span class="toc-text">拥有的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包的可见性"><span class="toc-number">1.3.4.</span> <span class="toc-text">包的可见性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引入与输出"><span class="toc-number">1.3.5.</span> <span class="toc-text">引入与输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标准元素"><span class="toc-number">1.3.6.</span> <span class="toc-text">标准元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包之间的关系"><span class="toc-number">1.3.7.</span> <span class="toc-text">包之间的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包图建模技术"><span class="toc-number">1.3.8.</span> <span class="toc-text">包图建模技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样例-1"><span class="toc-number">1.3.9.</span> <span class="toc-text">样例</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h2 id="静态图"><a href="#静态图" class="headerlink" title="静态图"></a>静态图</h2><p>包括类图、对象图、包图</p>
+<h3 id="类图（Class-diagram）"><a href="#类图（Class-diagram）" class="headerlink" title="类图（Class diagram）"></a>类图（Class diagram）</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>类是对象的集合，展示了对象的结构以及与系统的交互行为。类主要有属性（Attribute）和方法（Method）构成,属性代表对象的状态，如果属性被保存到数据库，此称之为“持久化”；方法代表对象的操作行为，类具有继承关系，可以继承于父类，也可以与其他的Class进行交互。<br>类图展示了系统的逻辑结构，类和接口的关系。</p>
+<h4 id="类的构成"><a href="#类的构成" class="headerlink" title="类的构成"></a>类的构成</h4><p>类主要有属性和方法构成。比如商品属性有：名称、价格、高度、宽度等；商品的方法有：计算税率，获得商品的评价等等。</p>
+<ul>
+<li><code>+</code>表示public</li>
+<li><code>#</code>表示protected</li>
+<li><code>—</code>表示private</li>
+<li><code>~</code>表示package</li>
+</ul>
+<h4 id="类图的元素"><a href="#类图的元素" class="headerlink" title="类图的元素"></a>类图的元素</h4><blockquote>
+<p>在类图中一共包含了以下几种模型元素，分别是：类（Class）、接口（Interface）、依赖（Dependency）关系、泛化（Generalization）关系、关联（Association）关系、聚合关系（Aggregation）、组合关系（Composition）和实现（Realization）关系。</p>
+</blockquote>
+<ol>
+<li><p>类（Class)</p>
+<blockquote>
+<p>在面向对象（OO) 编程中，类是对现实世界中一组具有相同特征的物体的抽象。</p>
+</blockquote>
+</li>
+<li><p>接口（Interface）</p>
+<blockquote>
+<p>接口是一种特殊的类，具有类的结构但不可被实例化，只可以被实现（继承）。在UML中，接口使用一个带有名称的小圆圈来进行表示。</p>
+</blockquote>
+</li>
+<li><p>关联(Association)</p>
+<blockquote>
+<p>两个相对独立的对象，当一个对象的实例与另外一个对象的特定实例存在固定关系时，这两个对象之间就存在关联关系。</p>
+</blockquote>
+<ol>
+<li><p>单向关联</p>
+<blockquote>
+<p>A1-&gt;A2: 表示A1认识A2，A1知道A2的存在，A1可以调用A2中的方法和属性<br><br>场景：订单和商品，订单中包括商品，但是商品并不了解订单的存在。<br><br><img src="image/class_diagram/%E5%8D%95%E5%90%91%E5%85%B3%E8%81%94.png" alt></p>
+</blockquote>
+</li>
+<li><p>双向关联</p>
+<blockquote>
+<p>B1-B2: 表示B1认识B2，B1知道B2的存在，B1可以调用B2中的方法和属性；同样B2也知道B1的存在，B2也可以调用B1的方法和属性。<br><br>场景：订单和客户，订单属于客户，客户拥有一些特定的订单<br><br><img src="image/class_diagram/%E5%8F%8C%E5%90%91%E5%85%B3%E8%81%94.png" alt></p>
+</blockquote>
+</li>
+<li><p>自身关联</p>
+<blockquote>
+<p>同一个类对象之间的关联<br><br>场景：组织结构的层次关系<br><br><img src="image/class_diagram/%E8%87%AA%E8%BA%AB%E5%85%B3%E8%81%94.png" alt="类与类之间自身关联图"></p>
+</blockquote>
+</li>
+<li><p>多维关联(N-ary Association)</p>
+<blockquote>
+<p>多个对象之间存在关联<br><br>场景：公司雇用员工，同时公司需要支付工资给员工<br><br><img src="image/class_diagram/%E5%A4%9A%E7%BB%B4%E5%85%B3%E8%81%94.png" alt="多维关联"></p>
+</blockquote>
+</li>
+<li><p>泛化(Generalization)</p>
+<blockquote>
+<p>类与类的继承关系，类与接口的实现关系。<br><br>场景：父与子、动物与人、植物与树、系统使用者与B2C会员和B2E会员的关系<br><br><img src="image/class_diagram/%E6%B3%9B%E5%8C%96.png" alt="泛化"><br><img src="image/class_diagram/%E7%BB%A7%E6%89%BF.png" alt="继承"></p>
+</blockquote>
+</li>
+<li><p>依赖(Dependency)</p>
+<blockquote>
+<p>类A要完成某个功能必须引用类B，则A与B存在依赖关系，依赖关系是弱的关联关系。C#不建议双相依赖，也就是相互引用<br><br>场景：本来人与电脑没有关系的，但由于偶然的机会，人需要用电脑写程序，这时候人就依赖于电脑。<br><br><img src="image/class_diagram/%E4%BE%9D%E8%B5%96.png" alt></p>
+</blockquote>
+</li>
+<li><p>聚合(Aggregation)</p>
+<blockquote>
+<p>当对象A被加入到对象B中，成为对象B的组成部分时，对象B和对象A之间为聚合关系。聚合是关联关系的一种，是较强的关联关系，强调的是整体与部分之间的关系。<br><br>场景：商品和他的规格、样式就是聚合关系。<br><br><img src="image/class_diagram/%E8%81%9A%E5%90%88.png" alt></p>
+</blockquote>
+</li>
+<li><p>组合（Composite）</p>
+<blockquote>
+<p>对象A包含对象B，对象B离开对象A没有实际意义。是一种更强的关联关系。人包含手，手离开人的躯体就失去了它应有的作用。<br><br>场景： Window窗体由滑动条slider、头部Header 和工作区Panel组合而成。<br><br><img src="image/class_diagram/%E7%BB%84%E5%90%88.png" alt></p>
+</blockquote>
+</li>
+<li><p>实现（Realization）</p>
+<blockquote>
+<p>一般来讲实现关系是针对类与接口之间的关系而言的。在UML类图中，实现关系用空心三角形+虚线来表示。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="StartUML实现画图"><a href="#StartUML实现画图" class="headerlink" title="StartUML实现画图"></a>StartUML实现画图</h4><p>startUML连线含义<br><img src="image/class_diagram/startUML%E8%BF%9E%E7%BA%BF.png" alt><br><br>作图参考<a href="http://www.flyne.org/article/379" target="_blank" rel="noopener">使用StarUML创建类图</a></p>
+<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><p><img src="image/class_diagram/%E7%B1%BB%E5%9B%BE%E7%BB%83%E4%B9%A0.jpg" alt></p>
+<h3 id="对象图（Object-Diagram）"><a href="#对象图（Object-Diagram）" class="headerlink" title="对象图（Object Diagram）"></a>对象图（Object Diagram）</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><blockquote>
+<p>对象图(Object Diagram)描述的是参与交互的各个对象在交互过程中某一时刻的状态。对象图可以被看作是类图在某一时刻的实例。</p>
+</blockquote>
+<p>在UML中，对象图使用的是与类图相同的符号和关系，因为对象就是类的实例。</p>
+<h4 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h4><blockquote>
+<p>对象图中包含对象（Object）和链（Link），对象是类的特定实例，链是类之间关系的实例。和类图一样，对象图对系统的静态设计或静态进程视图建模，对象图更注重现实或原型实例，这种视图主要支持系统的功能需求，对象图描述了静态的数据结构。</p>
+</blockquote>
+<h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h4><ul>
+<li>捕获示例和连接</li>
+<li>在分析和设计阶段创建</li>
+<li>捕获交互的静态部分</li>
+<li>举例说明数据/对象结构</li>
+<li>详细描述瞬间图</li>
+<li>工分析人士、设计人员和代码实现人员开发和使用</li>
+</ul>
+<h4 id="类图和对象图的区别"><a href="#类图和对象图的区别" class="headerlink" title="类图和对象图的区别"></a>类图和对象图的区别</h4><table>
+<thead>
+<tr>
+<th>类图</th>
+<th>对象图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类具有3个分栏，名称、特性、行为</td>
+<td>对象只有两个分栏：名称、特性</td>
+</tr>
+<tr>
+<td>名称栏只有类名</td>
+<td>名称形式为“对象名：类名”，匿名对象的名称形式”:类名”</td>
+</tr>
+<tr>
+<td>特征栏包含所有特性</td>
+<td>特征栏之定义了特征的当前值，以便用于测试用例或者例子中</td>
+</tr>
+<tr>
+<td>类中列出了操作</td>
+<td>不包含操作</td>
+</tr>
+<tr>
+<td>使用关联连接，关联使用名称、角色、多重性以及约束特征定义。类带白哦的是对象分类，所以必须说明可以参与关联的对象数目</td>
+<td>对象使用链接连、链拥有名称、角色，但是没有多重性。对象代表的是单独的实体，所有的链都是一对一，因此不涉及多重性。</td>
+</tr>
+</tbody></table>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><p><img src="image/class_diagram/%E5%AF%B9%E8%B1%A1%E5%9B%BE.png" alt></p>
+<h3 id="包图（Package-Diagram）"><a href="#包图（Package-Diagram）" class="headerlink" title="包图（Package Diagram）"></a>包图（Package Diagram）</h3><h4 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h4><blockquote>
+<p>包图（Package Diagram）由包和包之间的关系构成，对维护和控制系统总体结构很重要。系统建模中，有大量的类、接口、组件、节点和图，有必要将这些元素进行分组，把语义相近并倾向一起变化的元素组织起来加入同一包，这样方便理解和处理整个模型。设计良好的包是高内聚、低耦合的，并且对其内容的访问具有严密的控制。</p>
+</blockquote>
+<h4 id="包名"><a href="#包名" class="headerlink" title="包名"></a>包名</h4><blockquote>
+<p>每个包都必须有一个区别于其他包的名字。模型包的名字是一个字符串，可以分为简单名和路径名。</p>
+</blockquote>
+<ul>
+<li>简单名：指包仅含一个简单的名称。</li>
+<li>路径名：指以包位于的外围包的名字作为前缀。</li>
+</ul>
+<h4 id="拥有的元素"><a href="#拥有的元素" class="headerlink" title="拥有的元素"></a>拥有的元素</h4><ul>
+<li>包可以拥有类、接口、组件、节点、协作、用例图，甚至还可以包含其他的包</li>
+<li>包构成一个命名空间，这意味着一个模型包内各个包类建模元素不可以具有相同的名字，不同</li>
+<li>如果包被撤销，其中的元素也要被撤销。</li>
+</ul>
+<h4 id="包的可见性"><a href="#包的可见性" class="headerlink" title="包的可见性"></a>包的可见性</h4><blockquote>
+<p>包并不是独立存在的，包内的元素必然会和外部的类存在关系。而好的软件模型中的各个包应该做到高内聚、低耦合，为了做到这一点，就需要对包内的元素加以控制，使得某些元素能被外界访问，其他元素对外界不可见。这就是包内元素的可见性控制。</p>
+</blockquote>
+<p>包的可见性分为3种：</p>
+<ol>
+<li>公有访问（Public）：包内的元素可以被任何引入此包的其他包内的元素访问。公有访问用前缀于内含元素名字的加号（+）表示。</li>
+<li>保护访问（Protect）：此元素能被该模型包在继承关系上后继模式包的内含元素访问。保护访问用前缀于内含元素名字的（#）号表示。      </li>
+<li>私有访问（Private）：表示此元素可以被属于用一包的内含元素访问。私有访问用前缀于内含元素名字的减号（—）表示。</li>
+</ol>
+<h4 id="引入与输出"><a href="#引入与输出" class="headerlink" title="引入与输出"></a>引入与输出</h4><ul>
+<li>引入（Import）：允许一个包中的元素可以单向访问另一个包中的元素。</li>
+<li>输出（Export）：包中具有公有访问权限的内含元素。</li>
+</ul>
+<h4 id="标准元素"><a href="#标准元素" class="headerlink" title="标准元素"></a>标准元素</h4><table>
+<thead>
+<tr>
+<th>构造型</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>虚包（facade)</td>
+<td>描述一个只引用其他包元素的包</td>
+</tr>
+<tr>
+<td>框架(framework)</td>
+<td>描述一个主要有模式组成的包</td>
+</tr>
+<tr>
+<td>桩（stud）</td>
+<td>描述一个作为另一个包的公共内容代理的包</td>
+</tr>
+<tr>
+<td>子系统(subsustem)</td>
+<td>描述一个表示正在建模中的整个系统的一个独立部分的包</td>
+</tr>
+<tr>
+<td>系统(system)</td>
+<td>描述一个表示正在建模中的整个系统的包</td>
+</tr>
+</tbody></table>
+<h4 id="包之间的关系"><a href="#包之间的关系" class="headerlink" title="包之间的关系"></a>包之间的关系</h4><blockquote>
+<p>包与包之间有两种关系：</p>
+</blockquote>
+<ol>
+<li>引入和访问依赖：用于在一个包引入另一个包输出的元素。</li>
+<li>泛化：和类的泛化关系类似，包间的泛化关系遵循替代原则，特殊包可以应用到一般包被使用的任何地方。</li>
+</ol>
+<h4 id="包图建模技术"><a href="#包图建模技术" class="headerlink" title="包图建模技术"></a>包图建模技术</h4><ul>
+<li>建立包图的具体做法：<ol>
+<li>分析系统模型元素（通常是对象类），把概念上或语义上相近的模型元素纳入一个包。</li>
+<li>对于每一个包，对其模型元素标出其可见性。</li>
+<li>确定包与包之间的依赖关系，特别是输入依赖。</li>
+<li>确定包与包之间的泛化关系，确定包元素的多重性和重载。</li>
+<li>绘制包图</li>
+<li>包图精化</li>
+</ol>
+</li>
+</ul>
+<h4 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h4><p><img src="image/class_diagram/%E5%8C%85%E5%9B%BE.png" alt></p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/20/uml/03 静态图/">http://yoursite.com/2018/05/20/uml/03 静态图/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a><a href="/tags/静态图/">静态图</a></div><div class="post-nav"><a class="pre" href="/2018/05/21/uml/04 活动图(Activity Diagram)/">UML-活动图</a><a class="next" href="/2018/05/19/uml/02 用例图（Use Case）/">UML-用例图</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

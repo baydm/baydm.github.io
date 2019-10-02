@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Image | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Image</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Image</h1><div class="post-meta">Feb 22, 2019<span> | </span><span class="category"><a href="/categories/Flutter/">Flutter</a><a href="/categories/Flutter/Widget/">Widget</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类结构"><span class="toc-number">2.</span> <span class="toc-text">类结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造方法"><span class="toc-number">3.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性"><span class="toc-number">4.</span> <span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#image"><span class="toc-number">4.1.</span> <span class="toc-text">image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#width-amp-height"><span class="toc-number">4.2.</span> <span class="toc-text">width &amp; height</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fit"><span class="toc-number">4.3.</span> <span class="toc-text">fit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#color-amp-colorBlendMode"><span class="toc-number">4.4.</span> <span class="toc-text">color &amp; colorBlendMode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alignment"><span class="toc-number">4.5.</span> <span class="toc-text">alignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#repeat"><span class="toc-number">4.6.</span> <span class="toc-text">repeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#centerSlice"><span class="toc-number">4.7.</span> <span class="toc-text">centerSlice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matchTextDirection"><span class="toc-number">4.8.</span> <span class="toc-text">matchTextDirection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gaplessPlayback"><span class="toc-number">4.9.</span> <span class="toc-text">gaplessPlayback</span></a></li></ol></li></ol></div></div><div class="post-content"><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
+<p>Image, 图片显示Widget, 和Android ImageView相似，但是从实际使用的方法上看，与常用的图片加载库，如Picasso，Glide等相似，支持本地图片，资源图片，网络图片等加载方式。</p>
+</blockquote>
+<h2 id="类结构"><a href="#类结构" class="headerlink" title="类结构"></a>类结构</h2><p><img src="../img/15_1.jpg" alt></p>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Image()</td>
+<td>通用方法，使用ImageProvider实现，如下方法本质上也是使用的这个方法</td>
+</tr>
+<tr>
+<td>Image.asset</td>
+<td>加载资源图片</td>
+</tr>
+<tr>
+<td>Image.file</td>
+<td>加载本地图片文件</td>
+</tr>
+<tr>
+<td>Image.network</td>
+<td>加载网络图片</td>
+</tr>
+<tr>
+<td>Image.memory</td>
+<td>加载Uint8List资源图片</td>
+</tr>
+</tbody></table>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><blockquote>
+<p>抽象类，需要自己实现获取图片数据的操作</p>
+</blockquote>
+<p>常用ImageProvider</p>
+<ul>
+<li>ExactAssetImage</li>
+<li>AssetImage</li>
+<li>NetworkImage</li>
+<li>FileImage</li>
+<li>MemoryImage</li>
+</ul>
+<h3 id="width-amp-height"><a href="#width-amp-height" class="headerlink" title="width &amp; height"></a>width &amp; height</h3><blockquote>
+<p>显示区域的宽和高。</p>
+</blockquote>
+<h3 id="fit"><a href="#fit" class="headerlink" title="fit"></a>fit</h3><blockquote>
+<p>显示形式</p>
+</blockquote>
+<ul>
+<li>BoxFit.fill 全图显示，拉伸、充满</li>
+<li>BoxFit.contain 原比例全图显示</li>
+<li>BoxFit.cover 拉伸、裁剪、充满</li>
+<li>BoxFit.fitWidth 宽度充满</li>
+<li>BoxFit.fitHeight 高度充满</li>
+<li>BoxFit.scaleDown 类似contain，但是不允许显示超过源图片大小，可变小，不可变大</li>
+<li>BoxFit.none 原图显示</li>
+</ul>
+<h3 id="color-amp-colorBlendMode"><a href="#color-amp-colorBlendMode" class="headerlink" title="color &amp; colorBlendMode"></a>color &amp; colorBlendMode</h3><blockquote>
+<p>混合模式，配合使用</p>
+</blockquote>
+<h3 id="alignment"><a href="#alignment" class="headerlink" title="alignment"></a>alignment</h3><blockquote>
+<p>控制图片的摆放位置</p>
+</blockquote>
+<h3 id="repeat"><a href="#repeat" class="headerlink" title="repeat"></a>repeat</h3><blockquote>
+<p>重复显示</p>
+<ul>
+<li>ImageRepeat.repeat X、Y方向都重复显示</li>
+<li>ImageRepeat.repeatX 横向重复</li>
+<li>ImageRepeat.repeatY 竖向重复</li>
+<li>ImageRepeat.none 不重复</li>
+</ul>
+</blockquote>
+<h3 id="centerSlice"><a href="#centerSlice" class="headerlink" title="centerSlice"></a>centerSlice</h3><blockquote>
+<p>当图片被拉伸时，centerSlice定义的区域会被拉升</p>
+</blockquote>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Image image = Image.asset(</span><br><span class="line">    <span class="string">'image/14v.png'</span>,</span><br><span class="line">    width: <span class="number">300.0</span>,</span><br><span class="line">    height: <span class="number">300.0</span>,</span><br><span class="line">    fit: BoxFit.contain,</span><br><span class="line">    centerSlice: Rect.fromCircle(</span><br><span class="line">        center: <span class="keyword">const</span> Offset(<span class="number">100.0</span>,<span class="number">100.0</span>),</span><br><span class="line">        radius: <span class="number">10.0</span>,</span><br><span class="line">    ),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span>(sourceSize == inputSize, <span class="string">'centerSlice was used with a BoxFit that does not guarantee that the image is fully visible.'</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>* 当显示比例小于原图片大小时，会报错！</code></p>
+<h3 id="matchTextDirection"><a href="#matchTextDirection" class="headerlink" title="matchTextDirection"></a>matchTextDirection</h3><blockquote>
+<p>与 Directionality 配合使用</p>
+</blockquote>
+<h3 id="gaplessPlayback"><a href="#gaplessPlayback" class="headerlink" title="gaplessPlayback"></a>gaplessPlayback</h3><blockquote>
+<p>当ImageProvider发生变化后，重新加载图片的过程中，原图片的展示是否保留。若值为true，保留，若为false，不保留，直接空白等待下一张图片加载。</p>
+</blockquote>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2019/02/22/flutter/widget/image/">http://yoursite.com/2019/02/22/flutter/widget/image/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/flutter/">flutter</a></div><div class="post-nav"><a class="pre" href="/2019/02/22/flutter/widget/16_Material_Scaffold/">Scaffold</a><a class="next" href="/2019/02/19/flutter/12_第一个Flutter应用/">第一个Flutter应用</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

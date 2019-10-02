@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>UML-活动图 | 不熬夜的喵</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '3a58c2a27194be23c94632a73117f421';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">UML-活动图</h1><a id="logo" href="/.">不熬夜的喵</a><p class="description">夏天</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">UML-活动图</h1><div class="post-meta">May 21, 2018<span> | </span><span class="category"><a href="/categories/UML/">UML</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#活动图（Activity-Diagram）"><span class="toc-number">1.</span> <span class="toc-text">活动图（Activity Diagram）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#活动图的组成元素-Activity-Diagram-Element"><span class="toc-number">1.2.</span> <span class="toc-text">活动图的组成元素 Activity Diagram Element</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#示例【订单系统】"><span class="toc-number">1.3.</span> <span class="toc-text">示例【订单系统】</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考日志"><span class="toc-number">1.4.</span> <span class="toc-text">参考日志</span></a></li></ol></li></ol></div></div><div class="post-content"><h3 id="活动图（Activity-Diagram）"><a href="#活动图（Activity-Diagram）" class="headerlink" title="活动图（Activity Diagram）"></a>活动图（Activity Diagram）</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote>
+<p>活动图是UML用于对系统的动态行为建模的另一种常用工具，它描述活动的顺序，展现从一个活动到另一个活动的控制流。活动图在本质上是一种流程图。活动图着重表现从一个活动到另一个活动的控制流，是内部处理驱动的流程。</p>
+</blockquote>
+<h4 id="活动图的组成元素-Activity-Diagram-Element"><a href="#活动图的组成元素-Activity-Diagram-Element" class="headerlink" title="活动图的组成元素 Activity Diagram Element"></a>活动图的组成元素 Activity Diagram Element</h4><ol>
+<li><p>活动状态图（Activity）</p>
+<blockquote>
+<p>活动状态用于表达状态机中的非原子的运行，其特点如下</p>
+</blockquote>
+<ol>
+<li>活动状态可以分解成其他子活动或者动作状态。</li>
+<li>活动状态的内部活动可以用另一个活动图来表示。</li>
+<li>和动作状态不同，活动状态可以有入口动作和出口动作，也可以有内部转移。</li>
+<li>动作状态是活动状态的一个特例，如果某个活动状态只包括一个动作，那么它就是一个动作状态。<br>UML中活动状态和动作状态的图标相同，但是活动状态可以在图标中给出入口动作和出口动作等信息。</li>
+</ol>
+</li>
+<li><p>动作状态（Actions）</p>
+<blockquote>
+<p>动作状态是指原子的，不可中断的动作，并在此动作完成后通过完成转换转向另一个状态。动作状态有如下</p>
+</blockquote>
+<ol>
+<li>动作状态是原子的，它是构造活动图的最小单位。</li>
+<li>动作状态是不可中断的。</li>
+<li>动作状态是瞬时的行为。</li>
+<li>动作状态可以有入转换，入转换既可以是动作流，也可以是对象流。动作状态至少有一条出转换，这条转换以内部的完成为起点，与外部事件无关。</li>
+<li>动作状态与状态图中的状态不同，它不能有入口动作和出口动作，更不能有内部转移。</li>
+<li>在一张活动图中，动作状态允许多处出现。</li>
+</ol>
+</li>
+<li><p>动作状态约束（Action Constraints）</p>
+<blockquote>
+<p>用来约束动作状态。如下图展示了动作状态的前置条件和后置条件<br><br><img src="image/activity/%E5%8A%A8%E4%BD%9C%E7%8A%B6%E6%80%81%E7%BA%A6%E6%9D%9F.png" alt></p>
+</blockquote>
+</li>
+<li><p>动作流（Control Flow）</p>
+<blockquote>
+<p>动作之间的转换称之为动作流，活动图的转换用带箭头的直线表示，箭头的方向指向转入的方向。<br><img src="image/activity/%E5%8A%A8%E4%BD%9C%E6%B5%81.png" alt></p>
+</blockquote>
+</li>
+<li><p>开始节点（Initial Node）</p>
+<blockquote>
+<p>开始节点：表示成实心黑色圆点<br><br><img src="image/activity/%E5%BC%80%E5%A7%8B%E8%8A%82%E7%82%B9.png" alt></p>
+</blockquote>
+</li>
+<li><p>终止节点（Final Node）</p>
+<blockquote>
+<p>分为活动终止节点（activity final nodes）和流程终止节点（flow final nodes）。</p>
+</blockquote>
+<ul>
+<li>活动终止节点表示整个活动的结束<br><br><img src="image/activity/%E6%B4%BB%E5%8A%A8%E7%BB%88%E6%AD%A2.png" alt></li>
+<li>而流程终止节点表示是子流程的结束。<br><br><img src="image/activity/%E6%B5%81%E7%A8%8B%E7%BB%88%E6%AD%A2.png" alt></li>
+</ul>
+</li>
+<li><p>对象（Objects）</p>
+</li>
+<li><p>数据存储对象（DataStore）</p>
+<blockquote>
+<p>使用关键字«datastore»<br><br><img src="image/activity/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8.png" alt></p>
+</blockquote>
+</li>
+<li><p>对象流（Object Flows）</p>
+<blockquote>
+<p>对象流是动作状态或者活动状态与对象之间的依赖关系，表示动作使用对象或动作对对象的影响。用活动图描述某个对象时，可以把涉及到的对象放置在活动图中并用一个依赖将其连接到进行创建、修改和撤销的动作状态或者活动状态上，对象的这种使用方法就构成了对象流。</p>
+</blockquote>
+<p>对象流中的对象有以下特点：</p>
+<ol>
+<li>一个对象可以由多个动作操作。</li>
+<li>一个动作输出的对象可以作为另一个动作输入的对象。</li>
+<li>在活动图中，同一个对象可以多次出现，它的每一次出现表面该对象正处于对象生存期的不同时间点。</li>
+</ol>
+<p>对象流用带有箭头的虚线表示。如果箭头是从动作状态出发指向对象，则表示动作对对象施加了一定的影响。施加的影响包括创建、修改和撤销等。如果箭头从对象指向动作状态，则表示该动作使用对象流所指向的对象。<br>状态图中的对象用矩形表示，矩形内是该对象的名称，名称下的方括号表明对象此时的状态。<br></p>
+<p><img src="image/activity/%E5%AF%B9%E8%B1%A1%E6%B5%81.png" alt></p>
+</li>
+<li><p>分支与合并（Decision and Merge Nodes）</p>
+<blockquote>
+<p>分支与合并用菱形表示<br><br><img src="image/activity/%E5%88%86%E6%94%AF%E5%92%8C%E5%90%88%E5%B9%B6.png" alt></p>
+</blockquote>
+</li>
+<li><p>分叉与汇合（Fork and Join Nodes）</p>
+<blockquote>
+<p>分为水平风向和垂直方向。<br><br><img src="image/activity/%E5%88%86%E5%8F%89%E5%92%8C%E6%B1%87%E5%90%88.png" alt></p>
+</blockquote>
+<p>对象在运行时可能会存在两个或多个并发运行的控制流，为了对并发的控制流建模，UML中引入了分叉与汇合的概念。分叉用于将动作流分为两个或多个并发运行的分支，而汇合则用于同步这些并发分支，以达到共同完成一项事务的目的。</p>
+</li>
+<li><p>异常处理（Exception Handler）</p>
+<blockquote>
+<p>当受保护的活动发生异常时，触发异常处理节点。<br><br><img src="image/activity/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.png" alt></p>
+</blockquote>
+</li>
+<li><p>活动中断区域（Interruptible Activity Region）</p>
+<blockquote>
+<p>活动中断区域围绕一些可被中断的动作状态图。比如下图，正常情况下【Process Order】顺序流转到【Close Order】，订单处理流程完毕；但在【Process Order】过称中，会发送【Cancel Order】请求，这时会流转到【Cancel Order】，从而订单处理流程结束<br><br><img src="image/activity/%E6%B4%BB%E5%8A%A8%E4%B8%AD%E6%96%AD%E5%8C%BA%E5%9F%9F.png" alt></p>
+</blockquote>
+</li>
+<li><p>泳道（Partition）</p>
+<blockquote>
+<p>泳道将活动图中的活动划分为若干组，并把每一组指定给负责这组活动的业务组织，即对象。在活动图中，泳道区分了负责活动的对象，它明确地表示了哪些活动是由哪些对象进行的。在包含泳道的活动图中，每个活动只能明确地属于一个泳道。</p>
+</blockquote>
+<p>泳道是用垂直实线绘出，垂直线分隔的区域就是泳道。在泳道的上方可以给出泳道的名字或对象的名字，该对象负责泳道内的全部活动。泳道没有顺序，不同泳道中的活动既可以顺序进行也可以并发进行，动作流和对象流允许穿越分隔线。<br><br><img src="image/activity/%E6%B3%B3%E9%81%93.png" alt></p>
+</li>
+</ol>
+<h4 id="示例【订单系统】"><a href="#示例【订单系统】" class="headerlink" title="示例【订单系统】"></a>示例【订单系统】</h4><p><img src="image/activity/%E6%B4%BB%E5%8A%A8%E5%9B%BE%E6%A0%B7%E4%BE%8B.jpg" alt></p>
+<ol>
+<li>泳道分为：会员泳道和系统泳道。会员选择商品并加入购物车，系统完成订单生成及其支付完毕。</li>
+<li>开始节点：会员添加商品到购物车，点击【订单确认】，开始交于系统处理订单流程</li>
+<li>结束节点：商品发送完毕和付款成功，订单处理流程结束</li>
+<li>活动状态：产生订单、Check Credit Cart核对信用卡、Check Stock 核对库存量、Deliver Goods 发送商品、Process Credit Cart付款</li>
+<li>分叉与汇合：【产生订单】份叉为检查库存量和会员支付金额是否足够，如果不足，取消订单，如过库存量和支付金额足够，发送商品和付款，最后汇合为订单完成。</li>
+</ol>
+<h4 id="参考日志"><a href="#参考日志" class="headerlink" title="参考日志"></a>参考日志</h4><p><a href="http://www.cnblogs.com/ywqu/archive/2009/12/14/1624082.html" target="_blank" rel="noopener">http://www.cnblogs.com/ywqu/archive/2009/12/14/1624082.html</a></p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>不熬夜的喵</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/05/21/uml/04 活动图(Activity Diagram)/">http://yoursite.com/2018/05/21/uml/04 活动图(Activity Diagram)/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/uml/">uml</a><a href="/tags/活动图/">活动图</a></div><div class="post-nav"><a class="pre" href="/2018/05/22/uml/05 状态图(Statechart Diagram)/">UML-状态图</a><a class="next" href="/2018/05/20/uml/03 静态图/">UML-静态图</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxMS8yMzQxMg=="><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"><input type="hidden" name="si" value="http://yoursite.com"><input name="tn" type="hidden" value="bds"><input name="cl" type="hidden" value="3"><input name="ct" type="hidden" value="2097152"><input name="s" type="hidden" value="on"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android基础/">Android基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dart/">Dart</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/Widget/">Widget</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/容器/">容器</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/布局/">布局</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySql/">MySql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UML/">UML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/状态图/" style="font-size: 15px;">状态图</a> <a href="/tags/c/" style="font-size: 15px;">c</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/uml/" style="font-size: 15px;">uml</a> <a href="/tags/用例图/" style="font-size: 15px;">用例图</a> <a href="/tags/dart/" style="font-size: 15px;">dart</a> <a href="/tags/部署图/" style="font-size: 15px;">部署图</a> <a href="/tags/活动图/" style="font-size: 15px;">活动图</a> <a href="/tags/时序图/" style="font-size: 15px;">时序图</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/静态图/" style="font-size: 15px;">静态图</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/hexo配置/">利用Hexo+GitHub搭建个人博客(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/">利用Hexo+GitHub搭建个人博客(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/flutter/可滚动Widget/ListView/">ListView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">SingleChildScrollView</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">可滚动Widget</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/布局/布局类Widget/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">布局限制容器ConstrainedBox和SizedBox</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/变换Transform/">变换Transform</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Padding&Align&Center/">Padding&Align&Center</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/flutter/容器/Container/">Container</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">不熬夜的喵.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-2" count="50" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
