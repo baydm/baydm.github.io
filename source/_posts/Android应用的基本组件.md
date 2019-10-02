@@ -5,6 +5,8 @@ tags:
 categories:
   - Android基础  
 copyright: true
+comments: true
+toc: true
 date: 2015-04-29 17:35:00
 ---
 
