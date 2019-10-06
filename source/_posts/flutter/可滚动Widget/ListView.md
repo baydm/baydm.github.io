@@ -5,7 +5,6 @@ tags:
 - flutter
 categories:
 - Flutter
-- Widget
 copyright: true
 comments: true
 toc: true
