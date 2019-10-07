@@ -318,8 +318,8 @@ googleAnalytics:
 # Add baidu analytics configuration
 # 添加 baidu Analytics 配置
 baiduAnalytics:
-  enable: false
-  id: 
+  enable: true
+  id: 3a58c2a27194be23c94632a73117f421
   
 # 百度搜索资源平台提交链接
 baiduPush: true

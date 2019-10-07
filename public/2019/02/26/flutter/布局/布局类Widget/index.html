@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="布局, 不熬夜的喵">
+    <meta name="keywords" content="布局, JsonYe的博客">
     <meta name="description" content="介绍布局类Widget都会包含一个或多个子widget，不同的布局类Widget对子widget排版(layout)方式不同。我们在前面说过Element树才是最终的绘制树，Element树是通过widget树来创建的（通过Widget.c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>布局 | 不熬夜的喵</title>
+    <title>布局 | JsonYe的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -41,7 +41,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">不熬夜的喵</span>
+                    <span class="logo-span">JsonYe的博客</span>
                 </a>
             </div>
             
@@ -139,7 +139,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">不熬夜的喵</div>
+        <div class="logo-name">JsonYe的博客</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -563,7 +563,7 @@
             <a  href="/2019/02/26/flutter/布局/布局类Widget/">
                     《布局》
             </a> 由
-            <a href="http://yoursite.com">
+            <a href="https://baydm.github.io">
                 JsonYe
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">
@@ -628,20 +628,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">
+                <a href="/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="可滚动Widget">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="SingleChildScrollView">
                         
-                        <span class="card-title">可滚动Widget</span>
+                        <span class="card-title">SingleChildScrollView</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            可滚动Widget简介当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flutter会提示Overflow错误。为此，Flutter提供了多种可滚动Widget用于显示列表和长布局。如ListView、GridView等。
-Sc
+                            介绍
+类似Android中的ScrollView，只接收一个子Widget
+
+定义const SingleChildScrollView({
+    Key key,
+    this.scrollDirection = Axis.vert
                         
                     </div>
                     <div class="publish-info">
@@ -678,22 +682,20 @@ Sc
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/">
+                <a href="/2019/02/26/flutter/可滚动Widget/可滚动Widget/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="布局限制容器ConstrainedBox和SizedBox">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="可滚动Widget">
                         
-                        <span class="card-title">布局限制容器ConstrainedBox和SizedBox</span>
+                        <span class="card-title">可滚动Widget</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍
-ConstrainedBox和SizedBox都是通过RenderConstrainedBox来渲染的。SizedBox只是ConstrainedBox一个定制，本节把他们放在一起讨论。
-
-ConstrainedBoxConstrai
+                            可滚动Widget简介当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flutter会提示Overflow错误。为此，Flutter提供了多种可滚动Widget用于显示列表和长布局。如ListView、GridView等。
+Sc
                         
                     </div>
                     <div class="publish-info">
@@ -706,10 +708,6 @@ ConstrainedBoxConstrai
                             
                             <a href="/categories/Flutter/" class="post-category">
                                     Flutter
-                                </a>
-                            
-                            <a href="/categories/Flutter/容器/" class="post-category">
-                                    容器
                                 </a>
                             
                             
@@ -761,8 +759,8 @@ ConstrainedBoxConstrai
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: 不熬夜的喵<br />'
-            + '作者: LiuLi<br />'
+            + '来源: JsonYe的博客<br />'
+            + '作者: JsonYe<br />'
             + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -877,7 +875,7 @@ ConstrainedBoxConstrai
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="http://yoursite.com" target="_blank">LiuLi</a>
+            <a href="https://baydm.github.io" target="_blank">JsonYe</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -1012,6 +1010,16 @@ $(function () {
 
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3a58c2a27194be23c94632a73117f421";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
 
 
     <!-- Baidu Push -->

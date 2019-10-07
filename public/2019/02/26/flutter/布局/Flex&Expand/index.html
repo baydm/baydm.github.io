@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Flex&amp;Expand, 不熬夜的喵">
+    <meta name="keywords" content="Flex&amp;Expand, JsonYe的博客">
     <meta name="description" content="FlexFlex可以沿着水平或垂直方向排列子widget，如果你知道主轴方向，使用Row或Column会方便一些，因为Row和Column都继承自Flex，参数基本相同，所以能使用Flex的地方一定可以使用Row或Column。Flex本身">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Flex&amp;Expand | 不熬夜的喵</title>
+    <title>Flex&amp;Expand | JsonYe的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -41,7 +41,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">不熬夜的喵</span>
+                    <span class="logo-span">JsonYe的博客</span>
                 </a>
             </div>
             
@@ -139,7 +139,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">不熬夜的喵</div>
+        <div class="logo-name">JsonYe的博客</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -530,7 +530,7 @@
             <a  href="/2019/02/26/flutter/布局/Flex&Expand/">
                     《Flex&amp;Expand》
             </a> 由
-            <a href="http://yoursite.com">
+            <a href="https://baydm.github.io">
                 JsonYe
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">
@@ -595,26 +595,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/26/flutter/布局/Wrap&Flow/">
+                <a href="/2019/02/26/flutter/布局/Stack&Positioned/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Wrap&Flow">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Stack&Positioned">
                         
-                        <span class="card-title">Wrap&Flow</span>
+                        <span class="card-title">Stack&Positioned</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Wrap在介绍Row和Colum时，如果子widget超出屏幕范围，则会报溢出错误，如：
-Row(
-  children: &lt;Widget>[
-    Text("xxx"*100)
-  ],
-);
-
-可以看到，右边溢出部分报错。这是
+                            层叠布局层叠布局和Web中的绝对定位、Android中的Frame布局是相似的，子widget可以根据到父容器四个角的位置来确定本身的位置。绝对定位允许子widget堆叠（按照代码中声明的顺序）。Flutter中使用Stack和Positi
                         
                     </div>
                     <div class="publish-info">
@@ -651,25 +644,26 @@ Row(
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/26/flutter/widget/Button/">
+                <a href="/2019/02/26/flutter/布局/Wrap&Flow/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Button">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Wrap&Flow">
                         
-                        <span class="card-title">Button</span>
+                        <span class="card-title">Wrap&Flow</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍
-在Material Widget 库中提供了多种按钮Widget，如RaisedButton、FlatButton、OutlineButton等。
+                            Wrap在介绍Row和Colum时，如果子widget超出屏幕范围，则会报溢出错误，如：
+Row(
+  children: &lt;Widget>[
+    Text("xxx"*100)
+  ],
+);
 
-所有Material库中的按钮都具备以下共同点：
-
-按下时会有“水波动画”。
-有一个
+可以看到，右边溢出部分报错。这是
                         
                     </div>
                     <div class="publish-info">
@@ -733,8 +727,8 @@ Row(
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: 不熬夜的喵<br />'
-            + '作者: LiuLi<br />'
+            + '来源: JsonYe的博客<br />'
+            + '作者: JsonYe<br />'
             + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -849,7 +843,7 @@ Row(
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="http://yoursite.com" target="_blank">LiuLi</a>
+            <a href="https://baydm.github.io" target="_blank">JsonYe</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -984,6 +978,16 @@ $(function () {
 
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3a58c2a27194be23c94632a73117f421";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
 
 
     <!-- Baidu Push -->

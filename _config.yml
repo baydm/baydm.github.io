@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 不熬夜的喵 
-subtitle: 夏天
+title: JsonYe的博客
+subtitle: 枫叶
 description:
 keywords:
-author: LiuLi 
+author: JsonYe 
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://baydm.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -74,7 +74,7 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 12
 pagination_dir: page
 
 # Extensions #插件和主题 
@@ -88,7 +88,7 @@ feed:
 
 backup:
     type: git    
-    theme: maupassant
+    theme: hexo-theme-matery 
     message: backup my blog of git@github.com:baydm/baydm.github.io.git
     repository:
       github: git@github.com:baydm/baydm.github.io.git,backup
