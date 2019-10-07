@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>不熬夜的喵</title>
+  <title>JsonYe的博客</title>
   
-  <subtitle>夏天</subtitle>
+  <subtitle>枫叶</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://baydm.github.io/"/>
   <updated>2019-10-02T08:41:26.962Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://baydm.github.io/</id>
   
   <author>
-    <name>LiuLi</name>
+    <name>JsonYe</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>利用Hexo+GitHub搭建个人博客(二)</title>
-    <link href="http://yoursite.com/2019/09/30/hexo/hexo%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2019/09/30/hexo/hexo配置/</id>
+    <link href="https://baydm.github.io/2019/09/30/hexo/hexo%E9%85%8D%E7%BD%AE/"/>
+    <id>https://baydm.github.io/2019/09/30/hexo/hexo配置/</id>
     <published>2019-09-30T06:55:00.000Z</published>
     <updated>2019-10-02T08:41:26.962Z</updated>
     
@@ -38,17 +38,17 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://baydm.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://baydm.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>利用Hexo+GitHub搭建个人博客(一)</title>
-    <link href="http://yoursite.com/2019/09/30/hexo/%E5%88%A9%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/</id>
+    <link href="https://baydm.github.io/2019/09/30/hexo/%E5%88%A9%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://baydm.github.io/2019/09/30/hexo/利用Hexo+GitHub搭建个人博客/</id>
     <published>2019-09-30T05:55:00.000Z</published>
     <updated>2019-10-02T08:41:54.758Z</updated>
     
@@ -64,17 +64,17 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://baydm.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://baydm.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>ListView</title>
-    <link href="http://yoursite.com/2019/02/27/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/ListView/"/>
-    <id>http://yoursite.com/2019/02/27/flutter/可滚动Widget/ListView/</id>
+    <link href="https://baydm.github.io/2019/02/27/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/ListView/"/>
+    <id>https://baydm.github.io/2019/02/27/flutter/可滚动Widget/ListView/</id>
     <published>2019-02-26T16:36:00.000Z</published>
     <updated>2019-10-06T15:08:20.902Z</updated>
     
@@ -92,17 +92,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>SingleChildScrollView</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/SingleChildScrollView/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/SingleChildScrollView/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/可滚动Widget/SingleChildScrollView/</id>
     <published>2019-02-26T15:36:00.000Z</published>
     <updated>2019-10-06T15:08:20.900Z</updated>
     
@@ -121,43 +121,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>可滚动Widget</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/可滚动Widget/可滚动Widget/</id>
-    <published>2019-02-26T15:14:00.000Z</published>
-    <updated>2019-10-06T15:08:20.902Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="可滚动Widget简介"><a href="#可滚动Widget简介" class="headerlink" title="可滚动Widget简介"></a>可滚动Widget简介</h2><p>当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flutter会提示Overflow错误。为此，Flutter提供了多种可滚动Widget用于显示列表和长布局。如ListView、GridView等。</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Scrollable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>axisDirection <span class="token operator">=</span> AxisDirection<span class="token punctuation">.</span>down<span class="token punctuation">,</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>controller<span class="token punctuation">,</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>physics<span class="token punctuation">,</span>    <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>viewportBuilder<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 后面介绍</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><ul><li>axisDirection：滚动方向。</li><li>physics：此属性接受一个ScrollPhysics对象，它决定可滚动Widget如何响应用户操作。</li><li>controller：此属性接受一个ScrollController对象。ScrollController的主要作用是控制滚动位置和监听滚动事件。</li></ul><h2 id="Scrollbar"><a href="#Scrollbar" class="headerlink" title="Scrollbar"></a>Scrollbar</h2><p>Scrollbar是一个Material风格的滚动指示器（滚动条），如果要给可滚动widget添加滚动条，只需要将Scrollbar作为可股东widget的服widget即可，如：</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Scrollbar</span><span class="token punctuation">(</span>    child<span class="token punctuation">:</span> <span class="token function">SingleChildScrollView</span><span class="token punctuation">(</span>        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>Scrollbar和CupertionScrollbar都是通过ScrollController来监听滚动时间来确定滚动条位置，关于ScrollController详细的内容我们将在后面专门一节介绍。</p><h2 id="CupertionScrollbar"><a href="#CupertionScrollbar" class="headerlink" title="CupertionScrollbar"></a>CupertionScrollbar</h2><p>CupertinoScrollbar是iOS风格的滚动条，如果你使用的是Scrollbar，那么在iOS平台它会自动切换为CupertinoScrollbar。</p><h2 id="ViewPort视口"><a href="#ViewPort视口" class="headerlink" title="ViewPort视口"></a>ViewPort视口</h2><p>在很多布局系统中都有ViewPort的概念，在Flutter中，术语ViewPort（视口），如无特别说明，则是指一个Widget的实际显示区域。例如，一个ListView的显示区域高度是800像素，虽然其列表项总高度可能远远超过800像素，但是其ViewPort仍然是800像素。</p><h2 id="主轴和纵轴"><a href="#主轴和纵轴" class="headerlink" title="主轴和纵轴"></a>主轴和纵轴</h2><p>在可滚动widget的坐标描述中，通常将滚动方向的陈为主轴，非滚动方向称为纵轴。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;可滚动Widget简介&quot;&gt;&lt;a href=&quot;#可滚动Widget简介&quot; class=&quot;headerlink&quot; title=&quot;可滚动Widget简介&quot;&gt;&lt;/a&gt;可滚动Widget简介&lt;/h2&gt;&lt;p&gt;当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flut
-      
-    
-    </summary>
-    
-    
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
-    
-    
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>布局</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%B8%83%E5%B1%80/%E5%B8%83%E5%B1%80%E7%B1%BBWidget/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/布局/布局类Widget/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%B8%83%E5%B1%80/%E5%B8%83%E5%B1%80%E7%B1%BBWidget/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/布局/布局类Widget/</id>
     <published>2019-02-26T15:14:00.000Z</published>
     <updated>2019-10-06T15:08:20.901Z</updated>
     
@@ -173,17 +147,43 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可滚动Widget</title>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/%E5%8F%AF%E6%BB%9A%E5%8A%A8Widget/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/可滚动Widget/可滚动Widget/</id>
+    <published>2019-02-26T15:14:00.000Z</published>
+    <updated>2019-10-06T15:08:20.902Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="可滚动Widget简介"><a href="#可滚动Widget简介" class="headerlink" title="可滚动Widget简介"></a>可滚动Widget简介</h2><p>当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flutter会提示Overflow错误。为此，Flutter提供了多种可滚动Widget用于显示列表和长布局。如ListView、GridView等。</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Scrollable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>axisDirection <span class="token operator">=</span> AxisDirection<span class="token punctuation">.</span>down<span class="token punctuation">,</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>controller<span class="token punctuation">,</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>physics<span class="token punctuation">,</span>    <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>viewportBuilder<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 后面介绍</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><ul><li>axisDirection：滚动方向。</li><li>physics：此属性接受一个ScrollPhysics对象，它决定可滚动Widget如何响应用户操作。</li><li>controller：此属性接受一个ScrollController对象。ScrollController的主要作用是控制滚动位置和监听滚动事件。</li></ul><h2 id="Scrollbar"><a href="#Scrollbar" class="headerlink" title="Scrollbar"></a>Scrollbar</h2><p>Scrollbar是一个Material风格的滚动指示器（滚动条），如果要给可滚动widget添加滚动条，只需要将Scrollbar作为可股东widget的服widget即可，如：</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Scrollbar</span><span class="token punctuation">(</span>    child<span class="token punctuation">:</span> <span class="token function">SingleChildScrollView</span><span class="token punctuation">(</span>        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>Scrollbar和CupertionScrollbar都是通过ScrollController来监听滚动时间来确定滚动条位置，关于ScrollController详细的内容我们将在后面专门一节介绍。</p><h2 id="CupertionScrollbar"><a href="#CupertionScrollbar" class="headerlink" title="CupertionScrollbar"></a>CupertionScrollbar</h2><p>CupertinoScrollbar是iOS风格的滚动条，如果你使用的是Scrollbar，那么在iOS平台它会自动切换为CupertinoScrollbar。</p><h2 id="ViewPort视口"><a href="#ViewPort视口" class="headerlink" title="ViewPort视口"></a>ViewPort视口</h2><p>在很多布局系统中都有ViewPort的概念，在Flutter中，术语ViewPort（视口），如无特别说明，则是指一个Widget的实际显示区域。例如，一个ListView的显示区域高度是800像素，虽然其列表项总高度可能远远超过800像素，但是其ViewPort仍然是800像素。</p><h2 id="主轴和纵轴"><a href="#主轴和纵轴" class="headerlink" title="主轴和纵轴"></a>主轴和纵轴</h2><p>在可滚动widget的坐标描述中，通常将滚动方向的陈为主轴，非滚动方向称为纵轴。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;可滚动Widget简介&quot;&gt;&lt;a href=&quot;#可滚动Widget简介&quot; class=&quot;headerlink&quot; title=&quot;可滚动Widget简介&quot;&gt;&lt;/a&gt;可滚动Widget简介&lt;/h2&gt;&lt;p&gt;当内容超过显示窗口（ViewPort)时，如果没有特殊处理，Flut
+      
+    
+    </summary>
+    
+    
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
+    
+    
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>布局限制容器ConstrainedBox和SizedBox</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/%E5%B8%83%E5%B1%80%E9%99%90%E5%88%B6%E5%AE%B9%E5%99%A8ConstrainedBox%E5%92%8CSizedBox/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/%E5%B8%83%E5%B1%80%E9%99%90%E5%88%B6%E5%AE%B9%E5%99%A8ConstrainedBox%E5%92%8CSizedBox/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/容器/布局限制容器ConstrainedBox和SizedBox/</id>
     <published>2019-02-26T09:27:00.000Z</published>
     <updated>2019-10-02T11:58:29.247Z</updated>
     
@@ -200,19 +200,19 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
-      <category term="容器" scheme="http://yoursite.com/categories/Flutter/%E5%AE%B9%E5%99%A8/"/>
+      <category term="容器" scheme="https://baydm.github.io/categories/Flutter/%E5%AE%B9%E5%99%A8/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>变换Transform</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/%E5%8F%98%E6%8D%A2Transform/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/容器/变换Transform/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/%E5%8F%98%E6%8D%A2Transform/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/容器/变换Transform/</id>
     <published>2019-02-26T09:16:00.000Z</published>
     <updated>2019-10-06T15:08:20.901Z</updated>
     
@@ -229,17 +229,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Padding&amp;Align&amp;Center</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/Padding&amp;Align&amp;Center/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/容器/Padding&amp;Align&amp;Center/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/Padding&amp;Align&amp;Center/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/容器/Padding&amp;Align&amp;Center/</id>
     <published>2019-02-26T08:46:00.000Z</published>
     <updated>2019-10-06T15:08:20.902Z</updated>
     
@@ -257,17 +257,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Container</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/Container/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/容器/Container/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%AE%B9%E5%99%A8/Container/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/容器/Container/</id>
     <published>2019-02-26T08:43:00.000Z</published>
     <updated>2019-10-06T15:08:20.900Z</updated>
     
@@ -284,17 +284,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Stack&amp;Positioned</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Stack&amp;Positioned/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/布局/Stack&amp;Positioned/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Stack&amp;Positioned/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/布局/Stack&amp;Positioned/</id>
     <published>2019-02-26T08:33:00.000Z</published>
     <updated>2019-10-06T15:08:20.900Z</updated>
     
@@ -310,17 +310,43 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flex&amp;Expand</title>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Flex&amp;Expand/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/布局/Flex&amp;Expand/</id>
+    <published>2019-02-26T08:16:00.000Z</published>
+    <updated>2019-10-06T15:08:20.898Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><p>Flex可以沿着水平或垂直方向排列子widget，如果你知道主轴方向，使用Row或Column会方便一些，因为Row和Column都继承自Flex，参数基本相同，所以能使用Flex的地方一定可以使用Row或Column。Flex本身功能是很强大的，它也可以和Expanded配合实现弹性布局，接下来我们只讨论Flex和弹性布局相关的属性(其它属性已经在介绍Row和Column时介绍过了)。</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Flex</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>direction<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//弹性布局的方向, Row默认为水平方向，Column默认为垂直方向</span>  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> children <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><p>Flex继承自MultiChildRenderObjectWidget，对应的RenderObject为RenderFlex，RenderFlex中实现了其布局算法。</p><h2 id="Expanded"><a href="#Expanded" class="headerlink" title="Expanded"></a>Expanded</h2><p>可以按比例“扩伸”Row、Column和Flex子widget所占用的空间。</p><pre class=" language-dart"><code class="language-dart"><span class="token keyword">const</span> <span class="token function">Expanded</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  int flex <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>   <span class="token metadata symbol">@required</span> Widget child<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><p>flex为弹性系数，如果为0或null，则child是没有弹性的，即不会被扩伸占用的空间。如果大于0，所有的Expanded按照其flex的比例来分割主轴的全部空闲空间</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Flex&quot;&gt;&lt;a href=&quot;#Flex&quot; class=&quot;headerlink&quot; title=&quot;Flex&quot;&gt;&lt;/a&gt;Flex&lt;/h2&gt;&lt;p&gt;Flex可以沿着水平或垂直方向排列子widget，如果你知道主轴方向，使用Row或Column会方便一些，因为Row和Col
+      
+    
+    </summary>
+    
+    
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
+    
+    
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Wrap&amp;Flow</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Wrap&amp;Flow/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/布局/Wrap&amp;Flow/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Wrap&amp;Flow/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/布局/Wrap&amp;Flow/</id>
     <published>2019-02-26T08:16:00.000Z</published>
     <updated>2019-10-06T15:08:20.900Z</updated>
     
@@ -337,43 +363,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flex&amp;Expand</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Flex&amp;Expand/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/布局/Flex&amp;Expand/</id>
-    <published>2019-02-26T08:16:00.000Z</published>
-    <updated>2019-10-06T15:08:20.898Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><p>Flex可以沿着水平或垂直方向排列子widget，如果你知道主轴方向，使用Row或Column会方便一些，因为Row和Column都继承自Flex，参数基本相同，所以能使用Flex的地方一定可以使用Row或Column。Flex本身功能是很强大的，它也可以和Expanded配合实现弹性布局，接下来我们只讨论Flex和弹性布局相关的属性(其它属性已经在介绍Row和Column时介绍过了)。</p><pre class=" language-dart"><code class="language-dart"><span class="token function">Flex</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>direction<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//弹性布局的方向, Row默认为水平方向，Column默认为垂直方向</span>  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> children <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><p>Flex继承自MultiChildRenderObjectWidget，对应的RenderObject为RenderFlex，RenderFlex中实现了其布局算法。</p><h2 id="Expanded"><a href="#Expanded" class="headerlink" title="Expanded"></a>Expanded</h2><p>可以按比例“扩伸”Row、Column和Flex子widget所占用的空间。</p><pre class=" language-dart"><code class="language-dart"><span class="token keyword">const</span> <span class="token function">Expanded</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  int flex <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>   <span class="token metadata symbol">@required</span> Widget child<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre><p>flex为弹性系数，如果为0或null，则child是没有弹性的，即不会被扩伸占用的空间。如果大于0，所有的Expanded按照其flex的比例来分割主轴的全部空闲空间</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Flex&quot;&gt;&lt;a href=&quot;#Flex&quot; class=&quot;headerlink&quot; title=&quot;Flex&quot;&gt;&lt;/a&gt;Flex&lt;/h2&gt;&lt;p&gt;Flex可以沿着水平或垂直方向排列子widget，如果你知道主轴方向，使用Row或Column会方便一些，因为Row和Col
-      
-    
-    </summary>
-    
-    
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
-    
-    
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Button</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/widget/Button/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/widget/Button/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/widget/Button/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/widget/Button/</id>
     <published>2019-02-26T07:54:00.000Z</published>
     <updated>2019-10-06T15:08:20.905Z</updated>
     
@@ -390,17 +390,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Row&amp;Colum</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Row&amp;Colum/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/布局/Row&amp;Colum/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/%E5%B8%83%E5%B1%80/Row&amp;Colum/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/布局/Row&amp;Colum/</id>
     <published>2019-02-26T07:51:00.000Z</published>
     <updated>2019-10-06T15:08:20.899Z</updated>
     
@@ -419,17 +419,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Text</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/widget/Text/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/widget/Text/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/widget/Text/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/widget/Text/</id>
     <published>2019-02-26T07:14:00.000Z</published>
     <updated>2019-10-06T15:08:20.904Z</updated>
     
@@ -447,17 +447,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>StatefulWidget和StatelessWidget</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/widget/FlutterWidget/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/widget/FlutterWidget/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/widget/FlutterWidget/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/widget/FlutterWidget/</id>
     <published>2019-02-26T05:54:00.000Z</published>
     <updated>2019-10-06T15:08:20.903Z</updated>
     
@@ -473,17 +473,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Image&amp;Icon</title>
-    <link href="http://yoursite.com/2019/02/26/flutter/widget/Image&amp;Icon/"/>
-    <id>http://yoursite.com/2019/02/26/flutter/widget/Image&amp;Icon/</id>
+    <link href="https://baydm.github.io/2019/02/26/flutter/widget/Image&amp;Icon/"/>
+    <id>https://baydm.github.io/2019/02/26/flutter/widget/Image&amp;Icon/</id>
     <published>2019-02-26T05:14:00.000Z</published>
     <updated>2019-10-06T15:08:20.903Z</updated>
     
@@ -502,17 +502,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>PopupMenu</title>
-    <link href="http://yoursite.com/2019/02/25/flutter/widget/19_Material_PopupMenu/"/>
-    <id>http://yoursite.com/2019/02/25/flutter/widget/19_Material_PopupMenu/</id>
+    <link href="https://baydm.github.io/2019/02/25/flutter/widget/19_Material_PopupMenu/"/>
+    <id>https://baydm.github.io/2019/02/25/flutter/widget/19_Material_PopupMenu/</id>
     <published>2019-02-25T09:54:00.000Z</published>
     <updated>2019-10-06T15:08:20.903Z</updated>
     
@@ -531,17 +531,17 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>BottomNavigationBar</title>
-    <link href="http://yoursite.com/2019/02/25/flutter/widget/18_Material_BottomNavigationBar/"/>
-    <id>http://yoursite.com/2019/02/25/flutter/widget/18_Material_BottomNavigationBar/</id>
+    <link href="https://baydm.github.io/2019/02/25/flutter/widget/18_Material_BottomNavigationBar/"/>
+    <id>https://baydm.github.io/2019/02/25/flutter/widget/18_Material_BottomNavigationBar/</id>
     <published>2019-02-25T03:54:00.000Z</published>
     <updated>2019-10-06T15:08:20.902Z</updated>
     
@@ -560,10 +560,10 @@
     </summary>
     
     
-      <category term="Flutter" scheme="http://yoursite.com/categories/Flutter/"/>
+      <category term="Flutter" scheme="https://baydm.github.io/categories/Flutter/"/>
     
     
-      <category term="flutter" scheme="http://yoursite.com/tags/flutter/"/>
+      <category term="flutter" scheme="https://baydm.github.io/tags/flutter/"/>
     
   </entry>
   
